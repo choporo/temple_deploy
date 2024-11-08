@@ -59,9 +59,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="my-4" />
           <Amenities property={property} />
           <Separator className="mt-4 mb-6" />
-          <div className="w-full">
-            <InArticleAds />
-          </div>
+          <div className="w-full">{/* <InArticleAds /> */}</div>
 
           <Description title="사찰 연혁" description={property.templeHistory} />
           <div className="my-5">
