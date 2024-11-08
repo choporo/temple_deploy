@@ -8,7 +8,6 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
       {properties.map((property) => {
         return <PropertyCard key={property.id} property={property} />;
       })}
-      <InFeedAds />
     </section>
   );
 }
