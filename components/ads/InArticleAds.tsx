@@ -9,13 +9,11 @@ declare global {
 
 const InArticleAds = () => {
   useEffect(() => {
-    window.onload = function () {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    };
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
   }, []);
 
   return (
-    <div className="googleAd-container w-full h-24">
+    <div className="googleAd-container w-96 h-20">
       <ins
         className="adsbygoogle"
         style={{ display: "block text-align:center" }}
