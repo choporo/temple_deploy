@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "ARkjwElBauBW0crq23en89CYLrwzi29cKJV2n-s3Njs",
+    other: {
+      "naver-site-verification": "2d2354d4aa46fbf51ca93181f5f6f979867ab35c",
+    },
   },
   openGraph: {
     title: "절로 가 - 위로가 되는 여행",
