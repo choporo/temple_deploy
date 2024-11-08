@@ -59,7 +59,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="my-4" />
           <Amenities property={property} />
           <Separator className="mt-4 mb-6" />
-          <div className="w-full h-36">
+          <div className="w-full">
             <InArticleAds />
           </div>
 

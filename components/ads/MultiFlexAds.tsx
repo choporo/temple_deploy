@@ -13,7 +13,7 @@ const MultiFlexAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container">
+    <div className="googleAd-container w-full">
       <ins
         className="adsbygoogle"
         style={{ display: "block " }}
