@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  verification: {
+    google: "ARkjwElBauBW0crq23en89CYLrwzi29cKJV2n-s3Njs",
+  },
   openGraph: {
     title: "절로 가 - 위로가 되는 여행",
     description:

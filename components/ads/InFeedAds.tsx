@@ -13,14 +13,15 @@ const InFeedAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container">
+    <div className="googleAd-container w-full">
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-format="fluid"
-        data-ad-layout-key="+24+qk+1y+u+4"
+        data-ad-layout-key="-6t+ed+2i-1n-4w"
         data-ad-client="ca-pub-2999632223537453"
-        data-ad-slot="3182686865"
+        data-ad-slot="6121509694"
+        data-full-width-responsive="true"
       />
     </div>
   );

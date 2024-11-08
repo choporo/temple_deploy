@@ -13,7 +13,7 @@ const InArticleAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container w-96 h-20">
+    <div className="googleAd-container w-96 h-auto">
       <ins
         className="adsbygoogle"
         style={{ display: "block text-align:center" }}
@@ -21,6 +21,7 @@ const InArticleAds = () => {
         data-ad-format="fluid"
         data-ad-client="ca-pub-2999632223537453"
         data-ad-slot="5542091044"
+        data-full-width-responsive="true"
       />
     </div>
   );
