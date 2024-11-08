@@ -9,7 +9,9 @@ declare global {
 
 const InArticleAds = () => {
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    window.onload = function () {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    };
   }, []);
 
   return (
