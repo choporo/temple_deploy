@@ -11,6 +11,7 @@ import { FaStar } from "react-icons/fa6";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CarouselCard } from "@/components/card/CarouselCard";
 import InArticleAds from "@/components/ads/InArticleAds";
+import InFeedAds from "@/components/ads/InFeedAds";
 
 const DynamicMap = dynamic(
   () => import("@/components/properties/PropertyMap"),
@@ -59,7 +60,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="my-4" />
           <Amenities property={property} />
           <Separator className="mt-4 mb-6" />
-          <InArticleAds />
+          <InFeedAds />
           <Description title="사찰 연혁" description={property.templeHistory} />
           <div className="my-5">
             <Description title="관련 설화" description={property.tale} />
