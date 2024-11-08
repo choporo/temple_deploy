@@ -13,7 +13,7 @@ const InArticleAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container">
+    <div className="googleAd-container w-full">
       <ins
         className="adsbygoogle"
         style={{ display: "block text-align:center" }}
