@@ -1,3 +1,4 @@
+import InFeedAds from "../ads/InFeedAds";
 import PropertyCard from "../card/PropertyCard";
 import type { PropertyCardProps } from "@/utils/types";
 
@@ -7,6 +8,7 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
       {properties.map((property) => {
         return <PropertyCard key={property.id} property={property} />;
       })}
+      <InFeedAds />
     </section>
   );
 }

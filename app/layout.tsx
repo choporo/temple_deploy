@@ -9,6 +9,7 @@ import Container from "@/components/global/Container";
 import { ClerkProvider } from "@clerk/nextjs";
 import Script from "next/script";
 import { GoogleAdSense } from "@/components/home/GoogleAdSence";
+import GoogleAnalytics from "@/lib/GoogleAnaytics";
 
 export const metadata: Metadata = {
   title: "절로 가 - 위로가 되는 여행",
@@ -45,6 +46,8 @@ const jalnan = localFont({
   variable: "--font-jalnan",
 });
 
+const NEXT_PUBLIC_GOOGLE_ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +57,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={laundry.className}>
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
+          <Script src="https://cdn.iamport.kr/v1/iamport.js" />
           <Providers>
             <Navbar />
             <Container>

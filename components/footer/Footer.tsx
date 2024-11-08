@@ -1,3 +1,4 @@
+import FooterAds from "../ads/FooterAds";
 import Container from "../global/Container";
 
 function Footer() {
@@ -7,7 +8,9 @@ function Footer() {
   return (
     <Container>
       <footer className={`${flexCenter} mb-1`}>
-        <div className="flex w-full flex-col gap-5">FooterSide</div>
+        <div className="flex w-full flex-col gap-5">
+          <FooterAds />
+        </div>
       </footer>
     </Container>
   );
