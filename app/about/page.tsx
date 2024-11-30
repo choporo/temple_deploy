@@ -5,6 +5,7 @@ import AboutBuddha from "@/components/about/AboutBuddha";
 import AboutFourProducts from "@/components/about/AboutFourProducts";
 import AboutPortal from "@/components/about/AboutPortal";
 import FooterAds from "@/components/ads/FooterAds";
+import { Separator } from "@/components/ui/separator";
 
 function AboutPage() {
   return (
@@ -14,7 +15,6 @@ function AboutPage() {
       </h1>
       <AboutTemple />
       <AboutBuddha />
-      <FooterAds />
       <AboutFourProducts />
       <AboutPortal />
     </div>
