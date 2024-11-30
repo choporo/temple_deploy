@@ -15,6 +15,7 @@ function AboutPage() {
       </h1>
       <AboutTemple />
       <AboutBuddha />
+      <FooterAds />
       <AboutFourProducts />
       <AboutPortal />
     </div>
