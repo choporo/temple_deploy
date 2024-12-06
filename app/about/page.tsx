@@ -7,7 +7,7 @@ import AboutPortal from "@/components/about/AboutPortal";
 import FooterAds from "@/components/ads/FooterAds";
 
 export const metadata: Metadata = {
-  title: "about",
+  title: "용어해설",
 };
 
 function AboutPage() {

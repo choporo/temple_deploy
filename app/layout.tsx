@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "www.templeroad.kr",
     images: {
-      url: "/roofTileWithBell.jpg",
+      url: "/roofBell.jpg",
     },
   },
 };

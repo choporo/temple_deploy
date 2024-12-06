@@ -12,9 +12,21 @@ import TempleMap from "@/components/properties/TempleMap";
 import FooterAds from "@/components/ads/FooterAds";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "properties",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const response = await fetch(
+    `https://www.templeroad.kr/properties/${params.id}`
+  );
+  const post = await fetchPropertyDetails(params.id);
+
+  return {
+    title: post?.name,
+    description: post?.nameHistory,
+  };
+}
 
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);
