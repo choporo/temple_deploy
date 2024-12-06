@@ -10,14 +10,19 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { GoogleAdSense } from "@/components/home/GoogleAdSence";
 import GoogleAnalytics from "@/lib/GoogleAnaytics";
 import { Inter } from "next/font/google";
-import GoogleTag from "@/lib/GoogleTag";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "절로 가 - 위로가 되는 여행",
+  title: {
+    default: "절로 가 - 위로가 되는 여행",
+    template: "%s - 절로 가",
+  },
   description:
     "모든 것을 내려놓고 잠시 쉬고 싶을 때 방문하기 좋은 전통사찰 안내",
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: "/favicon.png",
   },

@@ -9,8 +9,12 @@ import Amenities from "@/components/properties/Amenities";
 import { FaStar } from "react-icons/fa6";
 import { CarouselCard } from "@/components/card/CarouselCard";
 import TempleMap from "@/components/properties/TempleMap";
-import Footer from "@/components/footer/Footer";
 import FooterAds from "@/components/ads/FooterAds";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "properties",
+};
 
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);

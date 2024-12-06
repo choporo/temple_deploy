@@ -1,11 +1,14 @@
 import React from "react";
-
+import { Metadata } from "next";
 import AboutTemple from "@/components/about/AboutTemple";
 import AboutBuddha from "@/components/about/AboutBuddha";
 import AboutFourProducts from "@/components/about/AboutFourProducts";
 import AboutPortal from "@/components/about/AboutPortal";
 import FooterAds from "@/components/ads/FooterAds";
-import { Separator } from "@/components/ui/separator";
+
+export const metadata: Metadata = {
+  title: "about",
+};
 
 function AboutPage() {
   return (
