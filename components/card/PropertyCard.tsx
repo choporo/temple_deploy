@@ -1,13 +1,27 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { PropertyCardProps } from "@/utils/types";
+import { motion } from "framer-motion";
 
-function PropertyCard({ property }: { property: PropertyCardProps }) {
+function PropertyCard({
+  property,
+  index,
+}: {
+  property: PropertyCardProps;
+  index: number;
+}) {
   const { name, mainImage } = property;
   const { id: propertyId, title, templeStay, address } = property;
 
   return (
-    <article className="group relative border-2 border-gray-100 rounded-sm shadow-sm">
+    <motion.article
+      className="group relative border-2 border-gray-100 rounded-sm shadow-sm"
+      initial={{ opacity: 0, y: index % 2 === 0 ? 100 : -100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, type: "spring", stiffness: 100 }}
+    >
       <Link href={`/properties/${propertyId}`}>
         <div className="relative h-[300px] mb-2 overflow-hidden rounded-md">
           <Image
@@ -29,10 +43,8 @@ function PropertyCard({ property }: { property: PropertyCardProps }) {
           <p className="text-sm text-muted-foreground mr-1">{templeStay}</p>
         </div>
       </Link>
-      <div className="absolute top-5 right-5 z-5">
-        {/* favorite toggle button */}
-      </div>
-    </article>
+      <div className="absolute top-5 right-5 z-5"></div>
+    </motion.article>
   );
 }
 export default PropertyCard;

@@ -6,8 +6,9 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
   return (
     <section className="mt-4 gap-8 grid sm:grid-cols-2  lg:grid-cols-3  ">
       {properties.map((property, index) => {
-        // if (index === 5) return <InFeedAds key={index} />;
-        return <PropertyCard key={property.id} property={property} />;
+        return (
+          <PropertyCard key={property.id} property={property} index={index} />
+        );
       })}
     </section>
   );
