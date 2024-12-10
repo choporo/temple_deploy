@@ -75,7 +75,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           </div>
           <TempleMap lat={property.latitude} lon={property.longitude} />
         </div>
-        <div className="lg:col-span-2 flex flex-col items-center">
+        <div className="hidden lg:flex lg:col-span-2 flex-col items-center">
           <RightSideBanner />
         </div>
       </section>
