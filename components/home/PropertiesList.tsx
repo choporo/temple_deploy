@@ -1,4 +1,3 @@
-import InFeedAds from "../ads/InFeedAds";
 import PropertyCard from "../card/PropertyCard";
 import type { PropertyCardProps } from "@/utils/types";
 

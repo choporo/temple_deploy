@@ -31,6 +31,7 @@ export async function generateMetadata({
 async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);
   if (!property) redirect("/");
+
   return (
     <section>
       <BreadCrumbs category={property.category} name={property.name} />

@@ -10,6 +10,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { GoogleAdSense } from "@/components/home/GoogleAdSence";
 import GoogleAnalytics from "@/lib/GoogleAnaytics";
 import { Inter } from "next/font/google";
+import PageTransition from "@/components/animation/PageTransition";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -87,10 +88,13 @@ export default function RootLayout({
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}
+
           <Providers>
             <Navbar />
             <Container>
-              <main className="container py-5">{children}</main>
+              <PageTransition>
+                <main className="container py-5">{children}</main>
+              </PageTransition>
             </Container>
             <Footer />
           </Providers>

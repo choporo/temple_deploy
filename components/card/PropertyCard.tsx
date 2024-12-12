@@ -21,6 +21,11 @@ function PropertyCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1, type: "spring", stiffness: 100 }}
+      whileHover={{
+        scale: 1.05,
+        transition: { type: "spring", stiffness: 400, damping: 10 },
+      }}
+      whileTap={{ scale: 0.9 }}
     >
       <Link href={`/properties/${propertyId}`}>
         <div className="relative h-[300px] mb-2 overflow-hidden rounded-md">
