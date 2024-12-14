@@ -36,8 +36,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     <section>
       <BreadCrumbs category={property.category} name={property.name} />
       <header className="flex justify-between items-center mt-2">
-        <h1 className="sm:text-xl text-base font-bold ">{property.title}</h1>
-        <div className="sm:flex hidden text-sm items-center gap-x-2">
+        <h1 className="sm:text-2xl text-base font-bold ">{property.title}</h1>
+        <div className="sm:flex hidden text-sm lg:text-base items-center gap-x-2">
           <FaStar className="mb-1 text-muted-foreground" />
           {property.rating}(출처 : 구글)
           <div className="hidden sm:flex">
@@ -62,7 +62,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
               <ShareButton name={property.name} propertyId={property.id} />
             </div>
           </div>
-          <p className="whitespace-pre-line mt-2 text-muted-foreground text-sm leading-loose">
+          <p className="whitespace-pre-line mt-2 text-muted-foreground text-sm lg:text-base leading-loose">
             {property.nameHistory}
           </p>
           <Separator className="my-4" />
