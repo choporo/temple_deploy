@@ -3,5 +3,5 @@ User-agent: *,
 Allow: /, /about/, /priorities/, /?category=
 Disallow: /admin
 
-Sitemap: http://templeroad.kr/sitemap.xml
-Host: http://templeroad.kr
+Sitemap: https://templeroad.kr/sitemap.xml
+Host: https://templeroad.kr
