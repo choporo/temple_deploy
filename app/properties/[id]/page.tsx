@@ -25,6 +25,12 @@ export async function generateMetadata({
   return {
     title: post?.name,
     description: post?.nameHistory,
+    robots: {
+      index: true,
+      googleBot: {
+        index: true,
+      },
+    },
   };
 }
 

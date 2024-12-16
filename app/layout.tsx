@@ -57,6 +57,12 @@ export const metadata: Metadata = {
       url: "/roofBell.jpg",
     },
   },
+  robots: {
+    index: true,
+    googleBot: {
+      index: true,
+    },
+  },
 };
 
 const laundry = localFont({

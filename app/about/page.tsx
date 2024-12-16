@@ -8,6 +8,12 @@ import FooterAds from "@/components/ads/FooterAds";
 
 export const metadata: Metadata = {
   title: "용어해설",
+  robots: {
+    index: true,
+    googleBot: {
+      index: true,
+    },
+  },
 };
 
 function AboutPage() {
