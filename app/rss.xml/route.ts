@@ -1,4 +1,3 @@
-import { link } from "fs";
 import { templePosts } from "@/utils/posts";
 import RSS from "rss";
 
@@ -15,14 +14,14 @@ export async function GET() {
     pubDate: new Date(),
   });
 
-  posts.map((post) => {
-    return {
+  posts.forEach((post) => {
+    feed.item({
       title: post.title,
+      description: post.description,
       url: post.link,
       date: post.pubDate,
-      description: post.description,
       guid: post.link,
-    };
+    });
   });
 
   return new Response(feed.xml({ indent: true }), {
