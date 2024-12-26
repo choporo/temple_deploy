@@ -25,8 +25,8 @@ async function EditPage({ params }: { params: { id: string } }) {
     image1,
     image2,
     image3,
-    image4,
-    image5,
+    // image4,
+    // image5,
     name,
     title,
     address,
@@ -46,7 +46,7 @@ async function EditPage({ params }: { params: { id: string } }) {
 
   return (
     <section className="border rounded-sm p-2">
-      <div className="grid grid-cols-3 gap-x-2 p-8 rounded">
+      <div className="flex justify-between gap-x-2 p-8 rounded">
         <ImageInputContainer
           action={updatePropertyImageAction}
           name="mainImage"
@@ -83,7 +83,7 @@ async function EditPage({ params }: { params: { id: string } }) {
           <input type="hidden" name="id" value={id} />
           <input type="hidden" name="url3" value={image3} />
         </ImageInputContainer>
-        <ImageInputContainer
+        {/* <ImageInputContainer
           action={updatePropertyImageAction4}
           name="image4"
           image={image4}
@@ -100,7 +100,7 @@ async function EditPage({ params }: { params: { id: string } }) {
         >
           <input type="hidden" name="id" value={id} />
           <input type="hidden" name="url5" value={image5} />
-        </ImageInputContainer>
+        </ImageInputContainer> */}
       </div>
       <Separator />
       <div>
