@@ -1,6 +1,6 @@
 
 User-agent: *,
-Allow: /, /about/, /priorities/, /?category=
+Allow: /, /about, /properties, /?category=
 Disallow: /admin
 
 Sitemap: http://templeroad.kr/sitemap.xml
