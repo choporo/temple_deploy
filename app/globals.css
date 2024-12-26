@@ -65,7 +65,7 @@
 }
 @font-face {
   font-family: laundry;
-  src: url("/public/fonts/laundry.woff");
+  src: url("../public/fonts/laundry.woff");
   font-weight: normal;
   font-style: normal;
 }
