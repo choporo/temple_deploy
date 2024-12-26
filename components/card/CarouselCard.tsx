@@ -16,19 +16,19 @@ export function CarouselCard({
   image1,
   image2,
   image3,
-  image4,
-  image5,
-}: {
+}: // image4,
+// image5,
+{
   image1: string;
   image2: string;
   image3: string;
-  image4: string;
-  image5: string;
+  // image4: string;
+  // image5: string;
 }) {
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   );
-  const images = [image1, image2, image3, image4, image5];
+  const images = [image1, image2, image3];
 
   return (
     <Carousel

@@ -55,8 +55,8 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         image1={property.image1}
         image2={property.image2}
         image3={property.image3}
-        image4={property.image4}
-        image5={property.image5}
+        // image4={property.image4}
+        // image5={property.image5}
       />
       <section className="lg:grid lg:grid-cols-12 gap-x-12 mt-5">
         <div className="lg:col-span-10 ">
