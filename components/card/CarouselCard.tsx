@@ -53,6 +53,8 @@ export function CarouselCard({
                     }}
                     sizes="100vw"
                     className="rounded-md"
+                    placeholder="blur"
+                    blurDataURL={image}
                   />
                 </CardContent>
               </Card>
