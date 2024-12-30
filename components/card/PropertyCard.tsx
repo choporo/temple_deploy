@@ -33,6 +33,9 @@ function PropertyCard({
             src={mainImage}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+            priority
+            blurDataURL={mainImage}
+            placeholder="blur"
             alt={name}
             className="p-1 rounded-md object-cover transform group-hover:scale-110 transition-transform duration-500 "
           />
