@@ -1,0 +1,7 @@
+
+User-agent: *,
+Allow: /, /about, /properties, /?category=
+Disallow: /admin
+
+Sitemap: http://templeroad.kr/sitemap.xml
+Host: http://templeroad.kr
