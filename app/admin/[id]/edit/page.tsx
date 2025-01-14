@@ -12,8 +12,6 @@ import {
   updatePropertyImageAction1,
   updatePropertyImageAction2,
   updatePropertyImageAction3,
-  updatePropertyImageAction4,
-  updatePropertyImageAction5,
 } from "@/utils/action";
 import React from "react";
 
@@ -25,8 +23,6 @@ async function EditPage({ params }: { params: { id: string } }) {
     image1,
     image2,
     image3,
-    // image4,
-    // image5,
     name,
     title,
     address,

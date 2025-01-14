@@ -1,14 +1,14 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import { Input } from "../ui/input";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
-import { useState, useEffect } from "react";
 
 function NavSearch() {
   const searchParams = useSearchParams();
-
   const pathname = usePathname();
   const { replace } = useRouter();
+
   const [search, setSearch] = useState(
     searchParams.get("search")?.toString() || ""
   );
@@ -20,22 +20,26 @@ function NavSearch() {
       params.delete("search");
     }
     replace(`${pathname}?${params.toString()}`);
-  }, 300);
+  }, 500);
+
   useEffect(() => {
     if (!searchParams.get("search")) {
       setSearch("");
     }
   }, [searchParams.get("search")]);
+
   return (
     <Input
-      type="search"
-      className="sm:max-w-lg max-w-48 dark:bg-muted text-xs"
+      type="text"
+      className="hidden md:flex max-w-xs xl:max-w-xl dark:bg-muted text-xs"
+      placeholder="사찰명 또는 지역을 입력하세요"
+      value={search}
       onChange={(e) => {
         setSearch(e.target.value);
         handleSearch(e.target.value);
       }}
-      value={search}
     />
   );
 }
+
 export default NavSearch;

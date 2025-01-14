@@ -16,13 +16,7 @@ async function PropertiesContainer({
   });
 
   if (properties.length === 0) {
-    return (
-      <EmptyList
-        heading="등록된 사찰 정보가 없습니다"
-        message="빠른 시간안에 사찰 정보를 등록하겠습니다"
-        btnText="Back Home"
-      />
-    );
+    return <EmptyList heading="등록된 사찰 정보가 없습니다" btnText="Home" />;
   }
 
   return <PropertiesList properties={properties} />;

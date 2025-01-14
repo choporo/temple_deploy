@@ -28,7 +28,7 @@ function PropertyCard({
       whileTap={{ scale: 0.9 }}
     >
       <Link href={`/properties/${propertyId}`}>
-        <div className="relative h-[300px] mb-2 overflow-hidden rounded-md">
+        <div className="relative h-[220px] xl:h-[250px] mb-2 overflow-hidden rounded-md">
           <Image
             src={mainImage}
             fill
@@ -41,14 +41,18 @@ function PropertyCard({
           />
         </div>
         <div className="flex justify-between items-center mx-1">
-          <h3 className="text-base font-semibold mt-1">{name}</h3>
+          <h3 className="xl:text-base text-sm font-semibold mt-1">{name}</h3>
         </div>
-        <p className="text-sm text-muted-foreground mx-1 mt-1">{title}</p>
+        <p className="xl:text-sm text-xs  text-muted-foreground mx-1 mt-1">
+          {title}
+        </p>
         <div className="flex justify-between mx-1 items-center my-1">
-          <p className="text-sm text-muted-foreground">
-            {address.split(" ")[0]} {address.split(" ")[1]}
+          <p className="xl:text-sm text-xs text-muted-foreground">
+            {address.split(" ")[1]} {address.split(" ")[2]}
           </p>
-          <p className="text-sm text-muted-foreground mr-1">{templeStay}</p>
+          <p className="xl:text-sm text-xs text-muted-foreground mr-1">
+            {templeStay}
+          </p>
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5"></div>

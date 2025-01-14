@@ -103,42 +103,6 @@ function AdminPropertyPage() {
             <AdminPropertyList category={"경북"} />
           </TabsContent>
         </Tabs>
-        {/* <div>
-       
-        <Table className="text-xs">
-          <TableCaption className="text-start">
-            총 {items.length}건
-          </TableCaption>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="text-center">지역</TableHead>
-              <TableHead className="text-center">사찰명</TableHead>
-              <TableHead className="text-center">타이틀</TableHead>
-              <TableHead className="text-center">Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {items.map((item) => {
-              const { id: propertyId, name, title, category } = item;
-
-              return (
-                <TableRow key={propertyId} className="text-center">
-                  <TableCell>{category}</TableCell>
-                  <TableCell>{name}</TableCell>
-                  <TableCell>{title}</TableCell>
-
-                  <TableCell className="flex items-center justify-center">
-                    <Link href={`/admin/${propertyId}/edit`}>
-                      <IconButton actionType="edit"></IconButton>
-                    </Link>
-                    <DeletePackage packageId={propertyId} />
-                  </TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </div> */}
       </div>
       <Link href={"/admin/create"}>
         <Button className="w-full mt-2" size={"lg"}>

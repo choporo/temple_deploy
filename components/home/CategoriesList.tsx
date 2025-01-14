@@ -2,7 +2,6 @@ import React from "react";
 import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { categories } from "@/utils/categories";
 import Link from "next/link";
-import Image from "next/image";
 
 function CategoriesList({
   category,
@@ -13,17 +12,15 @@ function CategoriesList({
 }) {
   const searchTerm = search ? `&search=${search}` : "";
 
-  const defaultCategory = category ? category : categories[0].label;
-  const activeColor = "#4263eb";
-  const inactiveColor = "#868e96";
+  // const defaultCategory = category ? category : categories[0].label;
 
   return (
     <section>
       <ScrollArea className="sm:py-2">
         <div className="whitespace-nowrap overflow-x-auto flex gap-x-4">
           {categories.map((item) => {
-            const isActive = item.label === defaultCategory;
-            const iconColor = isActive ? activeColor : inactiveColor;
+            const isActive = item.label === category;
+            // const iconColor = isActive ? activeColor : inactiveColor;
             return (
               <Link
                 key={item.label}
@@ -31,22 +28,14 @@ function CategoriesList({
               >
                 <article
                   className={`p-3 flex flex-col items-center cursor-pointer w-[100px] ${
-                    isActive ? "text-cyan-700 font-extrabold" : ""
+                    isActive ? "text-red-700 font-bold" : ""
                   }`}
                 >
-                  <Image
-                    src={item.icon}
-                    alt="icon"
-                    width={50}
-                    height={50}
-                    style={{
-                      filter: isActive
-                        ? "invert(20%) sepia(20%) saturate(10000%) hue-rotate(180deg)"
-                        : "none",
-                    }}
-                    className="w-10 h-10 "
+                  <item.icon
+                    style={{ fill: isActive ? "#c81e1e" : "#111827" }}
+                    className="xl:w-[40px] w-[30px] xl:h-[40px] h-[30px]"
                   />
-                  <p className="capitalize text-md mt-1 tracking-widest">
+                  <p className="capitalize xl:text-base text-sm mt-1 tracking-widest">
                     {item.label}
                   </p>
                 </article>

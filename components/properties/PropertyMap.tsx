@@ -18,7 +18,7 @@ function PropertyMap({ lat, lon }: { lat: string; lon: string }) {
       <MapContainer
         scrollWheelZoom={false}
         zoomControl={false}
-        className="h-[50vh] rounded-lg relative z-0"
+        className="h-[10vh] rounded-lg relative z-0"
         center={location || defaultLocation}
         zoom={15}
       >

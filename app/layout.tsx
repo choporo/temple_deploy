@@ -16,11 +16,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "절로 가 - 위로가 되는 여행",
-    template: "%s - 절로 가",
+    default: "우리나라 전통사찰 여행 | 절로 가",
+    template: "%s - 국내 사찰여행",
   },
-  description:
-    "모든 것을 내려놓고 잠시 쉬고 싶을 때 방문하기 좋은 전통사찰 안내",
+  description: "가볼 만한 우리나라 전통사찰 여행정보 안내",
   twitter: {
     card: "summary_large_image",
   },
@@ -46,9 +45,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "절로 가 - 위로가 되는 여행",
-    description:
-      "모든 것을 내려놓고 잠시 쉬고 싶을 때 방문하기 좋은 전통사찰 안내",
+    title: "우리나라 전통사찰 여행 | 절로 가",
+    description: "가볼 만한 우리나라 전통사찰 여행정보 안내",
     siteName: "절로 가",
     locale: "ko_KR",
     type: "website",
@@ -82,8 +80,10 @@ const jalnan = localFont({
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <ClerkProvider>
@@ -100,7 +100,11 @@ export default function RootLayout({
             <Navbar />
             <Container>
               <PageTransition>
-                <main className="container py-5">{children}</main>
+                <main className="container py-5">
+                  {children}
+                  {modal}
+                  <div id="modal-root" />
+                </main>
               </PageTransition>
             </Container>
             <Footer />

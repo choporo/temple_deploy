@@ -2,6 +2,7 @@
 
 import { SignOutButton } from "@clerk/nextjs";
 import { useToast } from "../ui/use-toast";
+import { Button } from "../ui/button";
 
 function SignOutLink() {
   const { toast } = useToast();
@@ -11,7 +12,14 @@ function SignOutLink() {
 
   return (
     <SignOutButton redirectUrl="/">
-      <button onClick={handleLogout}>로그아웃</button>
+      <Button
+        onClick={handleLogout}
+        className="text-xs"
+        variant="outline"
+        size="sm"
+      >
+        로그아웃
+      </Button>
     </SignOutButton>
   );
 }

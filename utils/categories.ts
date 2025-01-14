@@ -1,22 +1,24 @@
-import seoul from "@/public/icons/seoul.png";
-import busan from "@/public/icons/busan.png";
-import incheon from "@/public/icons/incheon.png";
-import daegu from "@/public/icons/daegu.png";
-import daejeon from "@/public/icons/daejeon.png";
-import ulsan from "@/public/icons/ulsan.png";
-import gangwon from "@/public/icons/gangwon.png";
-import gyeonggi from "@/public/icons/gyeonggi.png";
-import chungnam from "@/public/icons/chungnam.png";
-import chungbuk from "@/public/icons/chungbuk.png";
-import jeonnam from "@/public/icons/jeonnam.png";
-import jeonbuk from "@/public/icons/jeonbuk.png";
-import gyeongnam from "@/public/icons/gyeongnam.png";
-import gyeongbuk from "@/public/icons/gyeongbuk.png";
-import { StaticImageData } from "next/image";
+import seoul from "@/public/icons/seoul.svg";
+import busan from "@/public/icons/busan.svg";
+import daegu from "@/public/icons/daegu.svg";
+import daejeon from "@/public/icons/daejeon.svg";
+import ulsan from "@/public/icons/ulsan.svg";
+import gyeonggi from "@/public/icons/gyeonggi.svg";
+import chungnam from "@/public/icons/chungnam.svg";
+import chungbuk from "@/public/icons/chungbuk.svg";
+import jeonnam from "@/public/icons/jeonnam.svg";
+import jeonbuk from "@/public/icons/jeonbuk.svg";
+import gyeongnam from "@/public/icons/gyeongnam.svg";
+import gyeongbuk from "@/public/icons/gyeongbuk.svg";
+import incheon from "@/public/icons/incheon.svg"
+import gangwon from "@/public/icons/gangwon.svg"
+import { IconType } from "react-icons/lib";
+
+
 
 type Category = {
   label: CategoryLabel;
-  icon: StaticImageData;
+  icon: IconType;
 };
 
 export type CategoryLabel =
