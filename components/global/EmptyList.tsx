@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 function EmptyList({
-  heading = "등록된 목록이 없습니다",
+  heading,
   className,
 }: {
   heading?: string;
