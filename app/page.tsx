@@ -6,7 +6,8 @@ import { Metadata } from "next";
 import React, { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "우리나라 전통사찰 여행 | 절로 가",
+  title: "국내 전통사찰 여행 | 절로 가",
+  description: "가볼 만한 국내 전통사찰 여행정보 안내",
   robots: {
     follow: true,
     index: true,

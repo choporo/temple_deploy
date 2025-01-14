@@ -59,7 +59,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         // image4={property.image4}
         // image5={property.image5}
       />
-      <section className="lg:grid lg:grid-cols-12 gap-x-12 mt-5">
+      <section className=" gap-x-12 mt-5">
         <div className="lg:col-span-10 ">
           <div className="flex justify-between items-center">
             <h1 className="sm:text-2xl text-lg font-bold tracking-wider">
@@ -83,9 +83,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           </div>
           <TempleMap lat={property.latitude} lon={property.longitude} />
         </div>
-        <div className="hidden lg:flex lg:col-span-2 flex-col items-center">
+        {/* <div className="hidden xl:flex xl:col-span-2 flex-col items-center">
           <RightSideBanner />
-        </div>
+        </div> */}
       </section>
     </section>
   );

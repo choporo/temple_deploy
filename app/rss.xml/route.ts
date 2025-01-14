@@ -5,8 +5,8 @@ export async function GET() {
   const posts = templePosts;
 
   const feed = new RSS({
-    title: "절로 가",
-    description: "잠시 쉬어가기 좋은 우리나라 전통사찰 안내",
+    title: "국내 전통사찰 여행 | 절로 가",
+    description: "가볼 만한 국내 전통사찰 여행정보 안내",
     site_url: "http://templeroad.kr",
     feed_url: `http://templeroad.kr/feed.xml`,
     copyright: `${new Date().getFullYear()} http://templeroad.kr`,
