@@ -33,6 +33,7 @@
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",
     "eslint-plugin-react-hooks": "^5.2.0-canary-cabd8a0e-20250113",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.447.0",
     "motion": "^11.13.3",
