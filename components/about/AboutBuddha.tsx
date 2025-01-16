@@ -8,7 +8,7 @@ function AboutTemple() {
   return (
     <div>
       <h2 className="text-lg mb-2 mt-10 font-semibold">2. 전각의 종류</h2>
-      <div className="mx-2 text-muted-foreground grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
+      <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
         <div className="lg:col-span-5 relative h-full hidden lg:grid">
           <Image
             src={daewoong}
@@ -41,22 +41,22 @@ function AboutTemple() {
         </div>
       </div>
 
-      <h4 className="mx-2 text-muted-foreground mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
+      <h4 className="mx-2  mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
         {sanctum[7].label}
       </h4>
-      <h4 className="mx-2 text-muted-foreground mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
+      <h4 className="mx-2 mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
         {sanctum[8].label}
       </h4>
-      <h4 className="mx-2 text-muted-foreground mb-2 hidden lg:flex tracking-wide text-sm leading-loose">
+      <h4 className="mx-2 mb-2 hidden lg:flex tracking-wide text-sm leading-loose">
         {sanctum[9].label}
       </h4>
-      <h4 className="mx-2 text-muted-foreground mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
+      <h4 className="mx-2 mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
         {sanctum[10].label}
       </h4>
-      <h4 className="mx-2 text-muted-foreground mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
+      <h4 className="mx-2 mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
         {sanctum[11].label}
       </h4>
-      <h4 className="mx-2 text-muted-foreground mb-2 hidden lg:flex tracking-wide text-sm leading-loose">
+      <h4 className="mx-2 mb-2 hidden lg:flex tracking-wide text-sm leading-loose">
         {sanctum[12].label}
       </h4>
       <div className="lg:col-span-5 relative h-full lg:hidden grid">
@@ -70,7 +70,7 @@ function AboutTemple() {
           sizes="100vw"
           className="w-full rounded object-cover"
         />
-        <h6 className="text-center text-muted-foreground tracking-wider text-sm">
+        <h6 className="text-center tracking-wider text-sm">
           {"<"}수덕사 - 대웅전{">"}
         </h6>
       </div>

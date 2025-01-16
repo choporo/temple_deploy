@@ -7,10 +7,10 @@ function AboutFourProducts() {
   return (
     <div>
       <h2 className="text-lg mb-2 mt-10 font-semibold">3. 사찰의 사물(四物)</h2>
-      <h4 className="mx-2 text-muted-foreground text-sm leading-loose mb-2">
+      <h4 className="mx-2 text-sm leading-loose mb-2">
         {fourProducts[4].label}
       </h4>
-      <div className="mx-2 text-muted-foreground grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
+      <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
         <div className="lg:col-span-5 tracking-wide text-sm leading-loose">
           <h4 className="mb-2">{fourProducts[0].label}</h4>
           <h4 className="mb-2">{fourProducts[1].label}</h4>
