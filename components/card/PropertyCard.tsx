@@ -41,18 +41,14 @@ function PropertyCard({
           />
         </div>
         <div className="flex justify-between items-center mx-1">
-          <h3 className="xl:text-base text-sm font-semibold mt-1">{name}</h3>
+          <h3 className="xl:text-base text-sm font-semibold">{name}</h3>
         </div>
-        <p className="xl:text-sm text-xs  text-muted-foreground mx-1 mt-1">
-          {title}
-        </p>
+        <p className="xl:text-sm text-xs mx-1 mt-1">{title}</p>
         <div className="flex justify-between mx-1 items-center my-1">
-          <p className="xl:text-sm text-xs text-muted-foreground">
+          <p className="xl:text-sm text-xs ">
             {address.split(" ")[1]} {address.split(" ")[2]}
           </p>
-          <p className="xl:text-sm text-xs text-muted-foreground mr-1">
-            {templeStay}
-          </p>
+          <p className="xl:text-sm text-xs mr-1">{templeStay}</p>
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5"></div>

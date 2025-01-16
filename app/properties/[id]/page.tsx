@@ -43,10 +43,12 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     <section>
       <BreadCrumbs category={property.category} name={property.name} />
       <header className="flex justify-between items-center mt-2">
-        <h1 className="sm:text-2xl text-base font-bold ">{property.title}</h1>
+        <h1 className="sm:text-2xl text-base tracking-wider font-bold">
+          {property.title}
+        </h1>
         <div className="sm:flex hidden text-sm lg:text-base items-center gap-x-2">
-          <FaStar className="mb-1 text-muted-foreground" />
-          {property.rating}(출처 : 구글)
+          <FaStar className="text-yellow-500 mb-0.5" />
+          <h4 className="text-center">{property.rating}(출처 : 구글)</h4>
           <div className="hidden sm:flex">
             <ShareButton name={property.name} propertyId={property.id} />
           </div>
@@ -56,20 +58,13 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         image1={property.image1}
         image2={property.image2}
         image3={property.image3}
-        // image4={property.image4}
-        // image5={property.image5}
       />
-      <section className=" gap-x-12 mt-5">
-        <div className="lg:col-span-10 ">
-          <div className="flex justify-between items-center">
-            <h1 className="sm:text-2xl text-lg font-bold tracking-wider">
-              {property.name}
-            </h1>
-            <div className="sm:hidden mb-2">
-              <ShareButton name={property.name} propertyId={property.id} />
-            </div>
-          </div>
-          <p className="whitespace-pre-line mt-2 text-muted-foreground text-sm lg:text-base leading-loose">
+      <section className="mt-5">
+        <div>
+          <h1 className="sm:text-2xl text-lg font-bold tracking-wider">
+            {property.name}
+          </h1>
+          <p className="whitespace-pre-line tracking-wider text-sm sm:text-base leading-loose">
             {property.nameHistory}
           </p>
           <Separator className="my-4" />
@@ -83,9 +78,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           </div>
           <TempleMap lat={property.latitude} lon={property.longitude} />
         </div>
-        {/* <div className="hidden xl:flex xl:col-span-2 flex-col items-center">
-          <RightSideBanner />
-        </div> */}
       </section>
     </section>
   );
