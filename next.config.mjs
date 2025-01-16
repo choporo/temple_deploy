@@ -1,4 +1,3 @@
-import { config } from "process";
 import withSvgr from "next-svgr";
 
 /** @type {import('next').NextConfig} */
