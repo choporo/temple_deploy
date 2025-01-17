@@ -7,7 +7,7 @@ import AboutPortal from "@/components/about/AboutPortal";
 import FooterAds from "@/components/ads/FooterAds";
 
 export const metadata: Metadata = {
-  title: "용어해설",
+  title: "불교용어 정리",
   robots: {
     follow: true,
     index: true,

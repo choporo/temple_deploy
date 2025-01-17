@@ -16,8 +16,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "국내 전통사찰 여행 | 절로 가",
-    template: "%s - 국내 사찰여행",
+    default: "국내 사찰여행 | 절로 가",
+    template: "%s | 국내 사찰여행",
   },
   description: "가볼 만한 국내 전통사찰 여행정보 안내",
   twitter: {
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "국내 전통사찰 여행 | 절로 가",
-    description: "가볼 만한 국내 전통사찰 여행정보 안내",
+    title: "국내 사찰여행 | 절로 가",
+    description: "가볼 만한 국내 사찰 명소 소개",
     siteName: "절로 가",
     locale: "ko_KR",
     type: "website",
@@ -60,6 +60,7 @@ export const metadata: Metadata = {
     index: true,
     googleBot: {
       index: true,
+      follow: true,
     },
   },
 };

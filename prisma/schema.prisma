@@ -1,7 +1,7 @@
 datasource db {
-  provider          = "postgresql"
-  url               = env("DATABASE_URL")
-  directUrl         = env("DIRECT_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 generator client {
@@ -9,28 +9,28 @@ generator client {
 }
 
 model Property {
-  id          String     @id @default(uuid())
-  name        String
-  title     String
-  address   String
+  id            String   @id @default(uuid())
+  name          String
+  title         String
+  address       String
   parking       String
-  entranceFee     String
-  publicBus String
-  tale      String
-  nameHistory    String
-  rating       String
-  templeHistory       String
-  templeStay  String
-  hotPlace String
-  category String
-  mainImage String
-  latitude String
-  longitude String
-  image1 String
-  image2 String
-  image3 String
-  image4 String
-  image5 String
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt 
+  entranceFee   String
+  publicBus     String
+  tale          String
+  nameHistory   String
+  rating        String
+  templeHistory String
+  templeStay    String
+  hotPlace      String
+  category      String
+  mainImage     String
+  latitude      String
+  longitude     String
+  image1        String
+  image2        String
+  image3        String
+  image4        String
+  image5        String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }

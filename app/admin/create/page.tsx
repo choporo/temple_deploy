@@ -32,8 +32,8 @@ function CreateProperty() {
             <ImageInput name="image1" />
             <ImageInput name="image2" />
             <ImageInput name="image3" />
-            {/* <ImageInput name="image4" />
-            <ImageInput name="image5" /> */}
+            <ImageInput name="image4" />
+            <ImageInput name="image5" />
           </div>
           <TextAreaInput name="nameHistory" labelText="사찰명의 유래" />
           <TextAreaInput name="templeHistory" labelText="사찰의 역사" />
