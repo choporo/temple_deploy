@@ -434,4 +434,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>http://templeroad.kr/properties/6f8b3915-dcec-40fe-bd62-1b3491b1ba3b</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
