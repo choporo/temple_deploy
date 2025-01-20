@@ -7,7 +7,12 @@ import daewoong from "@/public/image/daewoong.jpg";
 function AboutTemple() {
   return (
     <div>
-      <h2 className="text-lg mb-2 mt-10 font-semibold">2. 전각의 종류</h2>
+      <h2 className="text-lg mb-2 mt-10 font-semibold">
+        2. 전각(殿閣)의 종류 -{" "}
+        <span className="text-sm">
+          불상을 모신 곳은 전(殿), 그 외는 각(閣)이라고 함
+        </span>
+      </h2>
       <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
         <div className="lg:col-span-5 relative h-full hidden lg:grid">
           <Image

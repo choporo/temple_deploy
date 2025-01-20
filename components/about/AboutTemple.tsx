@@ -6,7 +6,7 @@ import { temple } from "@/utils/aboutTemple";
 function AboutTemple() {
   return (
     <div>
-      <h2 className="text-lg  my-2 font-semibold">1. 사찰 대표 용어</h2>
+      <h2 className="text-lg  my-2 font-semibold">1. 불교 용어</h2>
       <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
         <div className="lg:col-span-7 tracking-wide text-sm leading-loose">
           <h4 className="mb-2">{temple[0].label}</h4>
