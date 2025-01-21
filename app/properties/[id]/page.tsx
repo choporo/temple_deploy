@@ -1,5 +1,4 @@
 import BreadCrumbs from "@/components/properties/BreadsCrumbs";
-import RightSideBanner from "@/components/properties/RightSideBanner";
 import ShareButton from "@/components/properties/ShareButton";
 import { Separator } from "@/components/ui/separator";
 import { fetchPropertyDetails } from "@/utils/action";
@@ -7,10 +6,10 @@ import { redirect } from "next/navigation";
 import Description from "@/components/properties/Description";
 import Amenities from "@/components/properties/Amenities";
 import { FaStar } from "react-icons/fa6";
-import { CarouselCard } from "@/components/card/CarouselCard";
 import TempleMap from "@/components/properties/TempleMap";
 import FooterAds from "@/components/ads/FooterAds";
 import { Metadata } from "next";
+import ImageContainer from "@/components/properties/ImageContainer";
 
 export async function generateMetadata({
   params,
@@ -54,11 +53,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </header>
-      <CarouselCard
-        image1={property.image1}
-        image2={property.image2}
-        image3={property.image3}
-      />
+      <ImageContainer mainImage={property.image1} name={property.name} />
       <section className="mt-5">
         <div>
           <h1 className="sm:text-2xl text-lg font-bold tracking-wider">

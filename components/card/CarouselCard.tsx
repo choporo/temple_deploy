@@ -15,20 +15,20 @@ import React from "react";
 export function CarouselCard({
   image1,
   image2,
-  image3,
-}: // image4,
+}: // image3,
+// image4,
 // image5,
 {
   image1: string;
   image2: string;
-  image3: string;
+  // image3: string;
   // image4: string;
   // image5: string;
 }) {
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   );
-  const images = [image1, image2, image3];
+  const images = [image1, image2];
 
   return (
     <Carousel
@@ -53,8 +53,8 @@ export function CarouselCard({
                     }}
                     sizes="100vw"
                     className="rounded-md"
-                    placeholder="blur"
-                    blurDataURL={image}
+                    // placeholder="blur"
+                    // blurDataURL={image}
                   />
                 </CardContent>
               </Card>
