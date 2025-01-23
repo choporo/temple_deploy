@@ -10,8 +10,6 @@ import {
   updatePropertyAction,
   updatePropertyImageAction,
   updatePropertyImageAction1,
-  updatePropertyImageAction2,
-  updatePropertyImageAction3,
 } from "@/utils/action";
 import React from "react";
 
@@ -21,8 +19,6 @@ async function EditPage({ params }: { params: { id: string } }) {
   const {
     mainImage,
     image1,
-    image2,
-    image3,
     name,
     title,
     address,
@@ -61,42 +57,6 @@ async function EditPage({ params }: { params: { id: string } }) {
           <input type="hidden" name="id" value={id} />
           <input type="hidden" name="url1" value={image1} />
         </ImageInputContainer>
-        <ImageInputContainer
-          action={updatePropertyImageAction2}
-          name="image2"
-          image={image2}
-          text="update image2"
-        >
-          <input type="hidden" name="id" value={id} />
-          <input type="hidden" name="url2" value={image2} />
-        </ImageInputContainer>
-        <ImageInputContainer
-          action={updatePropertyImageAction3}
-          name="image3"
-          image={image3}
-          text="update image"
-        >
-          <input type="hidden" name="id" value={id} />
-          <input type="hidden" name="url3" value={image3} />
-        </ImageInputContainer>
-        {/* <ImageInputContainer
-          action={updatePropertyImageAction4}
-          name="image4"
-          image={image4}
-          text="update image"
-        >
-          <input type="hidden" name="id" value={id} />
-          <input type="hidden" name="url4" value={image4} />
-        </ImageInputContainer>
-        <ImageInputContainer
-          action={updatePropertyImageAction5}
-          name="image5"
-          image={image5}
-          text="update image"
-        >
-          <input type="hidden" name="id" value={id} />
-          <input type="hidden" name="url5" value={image5} />
-        </ImageInputContainer> */}
       </div>
       <Separator />
       <div>

@@ -38,40 +38,67 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   const property = await fetchPropertyDetails(params.id);
   if (!property) redirect("/");
 
+  const {
+    category,
+    name,
+    title,
+    rating,
+    image1,
+    id,
+    nameHistory,
+    templeHistory,
+    tale,
+    latitude,
+    longitude,
+    address,
+    publicBus,
+    hotPlace,
+    templeStay,
+    entranceFee,
+    parking,
+  } = property;
+
   return (
     <section>
-      <BreadCrumbs category={property.category} name={property.name} />
+      <BreadCrumbs category={category} name={name} />
       <header className="flex justify-between items-center mt-2">
         <h1 className="sm:text-2xl text-base tracking-wider font-bold">
-          {property.title}
+          {title}
         </h1>
         <div className="sm:flex hidden text-sm lg:text-base items-center gap-x-2">
           <FaStar className="text-yellow-500 mb-0.5" />
-          <h4 className="text-center">{property.rating}(출처 : 구글)</h4>
+          <h4 className="text-center">{rating}(출처 : 구글)</h4>
           <div className="hidden sm:flex">
-            <ShareButton name={property.name} propertyId={property.id} />
+            <ShareButton name={name} propertyId={id} />
           </div>
         </div>
       </header>
-      <ImageContainer mainImage={property.image1} name={property.name} />
+      <ImageContainer mainImage={image1} name={name} />
       <section className="mt-5">
         <div>
           <h1 className="sm:text-2xl text-lg font-bold tracking-wider">
-            {property.name}
+            {name}
           </h1>
           <p className="whitespace-pre-line tracking-wider text-sm sm:text-base leading-loose">
-            {property.nameHistory}
+            {nameHistory}
           </p>
           <Separator className="my-4" />
-          <Amenities property={property} />
+          <Amenities
+            address={address}
+            publicBus={publicBus}
+            parking={parking}
+            entranceFee={entranceFee}
+            hotPlace={hotPlace}
+            templeStay={templeStay}
+          />
           <Separator className="mt-4 mb-6" />
           <FooterAds />
           <Separator className="mt-4 mb-6" />
-          <Description title="사찰 연혁" description={property.templeHistory} />
+          <Description title="사찰 연혁" description={templeHistory} />
           <div className="my-5">
-            <Description title="관련 설화" description={property.tale} />
+            <Description title="관련 설화" description={tale} />
           </div>
-          <TempleMap lat={property.latitude} lon={property.longitude} />
+          <TempleMap lat={latitude} lon={longitude} />
         </div>
       </section>
     </section>

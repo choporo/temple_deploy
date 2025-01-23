@@ -11,8 +11,14 @@ function PropertyCard({
   property: PropertyCardProps;
   index: number;
 }) {
-  const { name, mainImage } = property;
-  const { id: propertyId, title, templeStay, address } = property;
+  const {
+    id: propertyId,
+    title,
+    templeStay,
+    address,
+    name,
+    mainImage,
+  } = property;
 
   return (
     <motion.article

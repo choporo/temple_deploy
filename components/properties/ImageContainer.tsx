@@ -16,6 +16,8 @@ function ImageContainer({
         alt={name}
         className="object-cover  rounded-md"
         priority
+        blurDataURL={mainImage}
+        placeholder="blur"
       />
     </section>
   );
