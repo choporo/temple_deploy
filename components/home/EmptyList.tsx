@@ -18,7 +18,9 @@ function EmptyList({
         size="lg"
         variant={"outline"}
       >
-        <Link href="/">{btnText}</Link>
+        <Link href="/" passHref>
+          {btnText}
+        </Link>
       </Button>
     </div>
   );

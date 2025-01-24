@@ -104,7 +104,7 @@ function AdminPropertyPage() {
           </TabsContent>
         </Tabs>
       </div>
-      <Link href={"/admin/create"}>
+      <Link href={"/admin/create"} passHref>
         <Button className="w-full mt-2" size={"lg"}>
           등록하기
         </Button>

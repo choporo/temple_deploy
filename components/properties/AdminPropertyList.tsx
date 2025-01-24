@@ -35,7 +35,7 @@ async function AdminPropertyList({ category }: { category: string }) {
                 <TableCell>{name}</TableCell>
                 <TableCell>{title}</TableCell>
                 <TableCell className="flex items-center justify-center">
-                  <Link href={`/admin/${propertyId}/edit`}>
+                  <Link href={`/admin/${propertyId}/edit`} passHref>
                     <IconButton actionType="edit"></IconButton>
                   </Link>
                   <DeletePackage packageId={propertyId} />

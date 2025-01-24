@@ -33,7 +33,7 @@ function PropertyCard({
       }}
       whileTap={{ scale: 0.9 }}
     >
-      <Link href={`/properties/${propertyId}`}>
+      <Link href={`/properties/${propertyId}`} passHref>
         <div className="relative h-[220px] xl:h-[250px] mb-2 overflow-hidden rounded-md">
           <Image
             src={mainImage}

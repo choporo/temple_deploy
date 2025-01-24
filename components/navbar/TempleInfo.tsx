@@ -23,7 +23,9 @@ export default function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem>
-          <Link href={"/about"}>불교 용어 해설</Link>
+          <Link href={"/about"} passHref>
+            불교 용어 해설
+          </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

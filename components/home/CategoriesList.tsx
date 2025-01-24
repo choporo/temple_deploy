@@ -25,6 +25,7 @@ function CategoriesList({
               <Link
                 key={item.label}
                 href={`/?category=${item.label}${searchTerm}`}
+                passHref
               >
                 <article
                   className={`p-3 flex flex-col items-center cursor-pointer w-[100px] ${
