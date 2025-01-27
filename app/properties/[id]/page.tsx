@@ -10,6 +10,7 @@ import TempleMap from "@/components/properties/TempleMap";
 import FooterAds from "@/components/ads/FooterAds";
 import { Metadata } from "next";
 import ImageContainer from "@/components/properties/ImageContainer";
+import HistoryDescription from "@/components/properties/HistoryDescription";
 
 export async function generateMetadata({
   params,
@@ -76,10 +77,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
       <ImageContainer mainImage={image1} name={name} />
       <section className="mt-5">
         <div>
-          <h1 className="sm:text-2xl text-lg font-bold tracking-wider">
+          <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
             {name}
           </h1>
-          <p className="whitespace-pre-line tracking-wider text-sm sm:text-base leading-loose">
+          <p className="whitespace-pre-line tracking-wider text-sm mt-1 sm:text-base leading-loose">
             {nameHistory}
           </p>
           <Separator className="my-4" />
@@ -94,7 +95,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <Separator className="mt-4 mb-6" />
           <FooterAds />
           <Separator className="mt-4 mb-6" />
-          <Description title="사찰 연혁" description={templeHistory} />
+          <HistoryDescription title="사찰 연혁" description={templeHistory} />
           <div className="my-5">
             <Description title="관련 설화" description={tale} />
           </div>

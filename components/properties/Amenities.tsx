@@ -1,4 +1,3 @@
-import Title from "./Title";
 import { FaSearchLocation } from "react-icons/fa";
 import {
   FaLocationDot,
@@ -7,7 +6,6 @@ import {
   FaSquareParking,
   FaBed,
 } from "react-icons/fa6";
-import { PropertyCardProps } from "@/utils/types";
 
 function Amenities({
   address,
@@ -26,7 +24,7 @@ function Amenities({
 }) {
   return (
     <div className="items-center my-3 ">
-      <div className="my-3">
+      <div className="my-3 mx-2">
         <div className="flex items-center gap-x-4 my-5">
           <FaLocationDot className="sm:h-5 h-4 sm:w-5 w-4" />
           <span className="text-sm tracking-wider">{address}</span>
@@ -39,18 +37,18 @@ function Amenities({
           <FaSearchLocation className="sm:h-5 h-4 sm:w-5 w-4" />
           <span className="text-sm tracking-wider">{hotPlace}</span>
         </div>
-      </div>
-      <div className="flex items-center gap-x-4 my-5">
-        <FaBed className="sm:h-5 h-4 sm:w-5 w-4" />
-        <span className="text-sm tracking-wider">{templeStay}</span>
-      </div>
-      <div className="flex items-center gap-x-4 my-5">
-        <FaWonSign className="sm:h-5 h-4 sm:w-5 w-4" />
-        <span className="text-sm tracking-wider">{entranceFee}</span>
-      </div>
-      <div className="flex items-center gap-x-4 my-5">
-        <FaSquareParking className="sm:h-5 h-4 sm:w-5 w-4 " />
-        <span className="text-sm tracking-wider">{parking}</span>
+        <div className="flex items-center gap-x-4 my-5">
+          <FaBed className="sm:h-5 h-4 sm:w-5 w-4" />
+          <span className="text-sm tracking-wider">{templeStay}</span>
+        </div>
+        <div className="flex items-center gap-x-4 my-5">
+          <FaWonSign className="sm:h-5 h-4 sm:w-5 w-4" />
+          <span className="text-sm tracking-wider">{entranceFee}</span>
+        </div>
+        <div className="flex items-center gap-x-4 my-5">
+          <FaSquareParking className="sm:h-5 h-4 sm:w-5 w-4 " />
+          <span className="text-sm tracking-wider">{parking}</span>
+        </div>
       </div>
     </div>
   );

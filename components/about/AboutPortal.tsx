@@ -5,7 +5,7 @@ import { portal } from "@/utils/aboutTemple";
 
 function AboutPortal() {
   return (
-    <div>
+    <article className="text-justify">
       <h2 className="text-lg mb-2 mt-10 font-semibold">4. 사찰의 문(門)</h2>
       <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
         <div className="lg:col-span-5 relative h-full hidden lg:grid">
@@ -19,15 +19,15 @@ function AboutPortal() {
             sizes="100vw"
             className="w-full h-72 rounded object-cover"
           />
-          <h6 className="text-center tracking-wider text-sm">
+          <p className="text-center tracking-widest text-sm ">
             {"<"}건봉사 - 불이문{">"}
-          </h6>
+          </p>
         </div>
         <div className="lg:col-span-7 tracking-wide text-sm leading-loose">
-          <h4 className="mb-2">{portal[0].label}</h4>
-          <h4 className="mb-2">{portal[1].label}</h4>
-          <h4 className="mb-2">{portal[2].label}</h4>
-          <h4 className="mb-2">{portal[3].label}</h4>
+          <p className="mb-2  first-letter:ml-1">{portal[0].label}</p>
+          <p className="mb-2 first-letter:ml-1">{portal[1].label}</p>
+          <p className="mb-2 first-letter:ml-1">{portal[2].label}</p>
+          <p className="mb-2 first-letter:ml-1">{portal[3].label}</p>
         </div>
       </div>
       <div className="lg:col-span-5 relative h-full lg:hidden grid">
@@ -41,11 +41,11 @@ function AboutPortal() {
           sizes="100vw"
           className="w-full h-80 rounded object-cover"
         />
-        <h6 className="text-center tracking-wider text-sm">
+        <h6 className="text-center tracking-widest text-sm">
           {"<"}건봉사 - 불이문{">"}
         </h6>
       </div>
-    </div>
+    </article>
   );
 }
 
