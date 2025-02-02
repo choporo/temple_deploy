@@ -1,7 +1,6 @@
 import LoadingCards from "@/components/card/LoadingCards";
 import CategoriesList from "@/components/home/CategoriesList";
 import PropertiesContainer from "@/components/home/PropertiesContainer";
-import { fetchPropertyDetails } from "@/utils/action";
 import { Metadata } from "next";
 import React, { Suspense } from "react";
 

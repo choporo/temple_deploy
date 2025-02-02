@@ -6,7 +6,7 @@ import ImageInputContainer from "@/components/form/ImageInputContainer";
 import TextAreaInput from "@/components/form/TextAreaInput";
 import { Separator } from "@/components/ui/separator";
 import {
-  fetchPropertyDetails,
+  fetchPropertyEdit,
   updatePropertyAction,
   updatePropertyImageAction,
   updatePropertyImageAction1,
@@ -15,7 +15,7 @@ import React from "react";
 
 async function EditPage({ params }: { params: { id: string } }) {
   const { id } = params;
-  const property = await fetchPropertyDetails(id);
+  const property = await fetchPropertyEdit(id);
   const {
     mainImage,
     image1,

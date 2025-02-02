@@ -65,6 +65,23 @@ export const fetchAllProperties = async () => {
     orderBy: {
       category: "desc",
     },
+    select: {
+      mainImage: true,
+      image1: true,
+      id: true,
+      name: true,
+      title: true,
+      address: true,
+      parking: true,
+      entranceFee: true,
+      publicBus: true,
+      tale: true,
+      nameHistory: true,
+      rating: true,
+      templeHistory: true,
+      templeStay: true,
+      hotPlace: true,
+    },
   });
 
   return properties;
@@ -92,25 +109,44 @@ export const fetchProperties = async ({
     },
     select: {
       mainImage: true,
-      image1: true,
-      image2: true,
-      image3: true,
-      id: true,
-      name: true,
-      title: true,
-      address: true,
-      parking: true,
-      entranceFee: true,
-      publicBus: true,
-      tale: true,
-      nameHistory: true,
-      rating: true,
-      templeHistory: true,
-      templeStay: true,
-      hotPlace: true,
+        id: true,
+        name: true,
+        title: true,
+        address: true,
+        rating: true,
+        templeStay: true,
+        category: true,
     },
   });
   return properties;
+};
+
+export const fetchPropertyEdit= async (id: string) => {
+  return db.property.findUnique({
+    where: {
+      id,
+    },
+    select:{
+        mainImage: true,
+        image1: true,
+        id: true,
+        name: true,
+        title: true,
+        address: true,
+        parking: true,
+        entranceFee: true,
+        publicBus: true,
+        tale: true,
+        nameHistory: true,
+        rating: true,
+        templeHistory: true,
+        templeStay: true,
+        hotPlace: true,
+        longitude: true,
+        latitude: true,
+        category: true,
+    }
+  });
 };
 
 export const fetchPropertyDetails = async (id: string) => {
@@ -118,6 +154,25 @@ export const fetchPropertyDetails = async (id: string) => {
     where: {
       id,
     },
+    select:{
+        image1: true,
+        id: true,
+        name: true,
+        title: true,
+        address: true,
+        parking: true,
+        entranceFee: true,
+        publicBus: true,
+        tale: true,
+        nameHistory: true,
+        rating: true,
+        templeHistory: true,
+        templeStay: true,
+        hotPlace: true,
+        longitude: true,
+        latitude: true,
+        category: true,
+    }
   });
 };
 
