@@ -94,14 +94,16 @@ export const fetchProperties = async ({
   search?: string;
   category?: string;
 }) => {
-  // const defaultCategory = category ? category : "서울";
+  const defaultCategory = category ? category : "서울";
+  // const defaultSearch = search ? undefined  : defaultCategory
 
   const properties = await db.property.findMany({
+    
     where: {
-      category,
+      category: defaultCategory,
       OR:[
-        {name: {contains: search, mode: 'insensitive'}},
-        {address: {contains: search, mode: 'insensitive' }}
+        {name: {contains: search, mode:"insensitive"}},
+        {address: {contains: search, mode: 'insensitive'}}
       ]
     },
     orderBy: {
@@ -113,7 +115,7 @@ export const fetchProperties = async ({
         name: true,
         title: true,
         address: true,
-        rating: true,
+        // rating: true,
         templeStay: true,
         category: true,
     },

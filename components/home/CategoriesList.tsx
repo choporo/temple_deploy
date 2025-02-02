@@ -12,14 +12,14 @@ function CategoriesList({
 }) {
   const searchTerm = search ? `&search=${search}` : "";
 
-  // const defaultCategory = category ? category : categories[0].label;
+  const defaultCategory = category ? category : categories[0].label;
 
   return (
     <section>
       <ScrollArea className="sm:py-2">
         <div className="whitespace-nowrap overflow-x-auto flex gap-x-4">
           {categories.map((item) => {
-            const isActive = item.label === category;
+            const isActive = item.label === defaultCategory;
             // const iconColor = isActive ? activeColor : inactiveColor;
             return (
               <Link
