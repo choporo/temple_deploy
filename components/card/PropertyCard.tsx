@@ -47,7 +47,7 @@ function PropertyCard({
           />
         </div>
         <div className="flex justify-between items-center mx-1">
-          <h3 className="xl:text-base text-sm font-semibold"></h3>
+          <h3 className="xl:text-base text-sm font-semibold">{name}</h3>
         </div>
         <p className="xl:text-sm text-xs mx-1 mt-1">{title}</p>
         <div className="flex justify-between mx-1 items-center my-1">
