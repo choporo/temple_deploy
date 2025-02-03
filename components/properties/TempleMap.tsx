@@ -19,7 +19,7 @@ export function TempleMap({ lat, lon }: { lat: string; lon: string }) {
 
       const mapOptions: google.maps.MapOptions = {
         center: position,
-        zoom: 15,
+        zoom: 14,
         mapId: "MY_NEXTJS_MAPID",
       };
 
@@ -32,7 +32,7 @@ export function TempleMap({ lat, lon }: { lat: string; lon: string }) {
     };
     initMap();
   }, []);
-  return <div style={{ height: "600px" }} ref={mapRef} />;
+  return <div className="h-[400px] sm:h-[550px]" ref={mapRef} />;
 }
 
 export default TempleMap;

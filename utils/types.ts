@@ -24,3 +24,4 @@ export type PropertyCardProps = {
   templeStay: string;
   // hotPlace: string;
 };
+

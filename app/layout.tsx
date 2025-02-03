@@ -16,10 +16,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "국내 사찰여행 | 절로 가",
-    template: "%s | 국내 사찰여행",
+    default: "절로 가 | 국내 사찰여행",
+    template: "%s | 절로 가",
   },
-  description: "가볼 만한 국내 전통사찰 여행정보 안내",
+  description: "가볼 만한 국내 사찰 명소 소개",
   twitter: {
     card: "summary_large_image",
   },
@@ -34,9 +34,22 @@ export const metadata: Metadata = {
     "휴식",
     "여행",
     "국내여행",
-    "힐링",
-    "부처",
-    "불교",
+    "힐링여행",
+    "불교용어",
+    "temple",
+    "korea temple",
+    "절 여행",
+    "visit korea",
+    "recommend place in south korea",
+    "south korea",
+    "유명 사찰",
+    "템플스테이",
+    "temple stay",
+    "사찰 음식",
+    "enjoy korea",
+    "korea tours",
+    "visit south korea",
+    "temples in korea",
   ],
   verification: {
     google: "ARkjwElBauBW0crq23en89CYLrwzi29cKJV2n-s3Njs",
@@ -45,7 +58,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "국내 사찰여행 | 절로 가",
+    title: "절로 가 | 국내 사찰여행",
     description: "가볼 만한 국내 사찰 명소 소개",
     siteName: "절로 가",
     locale: "ko_KR",

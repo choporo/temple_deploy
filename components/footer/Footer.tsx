@@ -4,7 +4,7 @@ import Container from "../global/Container";
 function Footer() {
   return (
     <Container>
-      <footer className="w-full h-24">
+      <footer>
         <FooterAds />
       </footer>
     </Container>
