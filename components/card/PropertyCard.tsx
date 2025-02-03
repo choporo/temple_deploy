@@ -52,7 +52,7 @@ function PropertyCard({
         <p className="xl:text-sm text-xs mx-1 mt-1">{title}</p>
         <div className="flex justify-between mx-1 items-center my-1">
           <p className="xl:text-sm text-xs ">
-            {address.split(" ")[1]} {address.split(" ")[2]}
+            {address.split(" ")[0]} {address.split(" ")[1]}
           </p>
           <p className="xl:text-sm text-xs mr-1">{templeStay}</p>
         </div>
