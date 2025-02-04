@@ -10,7 +10,7 @@ const Description = ({
   return (
     <article className="mt-2">
       <Title text={title} />
-      <p className="text-sm sm:text-base whitespace-pre-line tracking-widest leading-loose first-letter:ml-2">
+      <p className="text-sm/8 sm:text-base/8 whitespace-pre-wrap tracking-widest text-justify">
         {description}
       </p>
     </article>

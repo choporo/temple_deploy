@@ -8,13 +8,13 @@ function ImageContainer({
   name: string;
 }) {
   return (
-    <section className="h-[300px] md:h-[500px] relative mt-8">
+    <section className="h-[300px] md:h-[550px] relative mt-2">
       <Image
         src={mainImage}
         fill
         sizes="100vw"
         alt={name}
-        className="object-cover  rounded-md"
+        className="object-cover rounded-md"
         priority
         blurDataURL={mainImage}
         placeholder="blur"

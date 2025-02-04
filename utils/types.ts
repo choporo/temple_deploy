@@ -19,7 +19,7 @@ export type PropertyCardProps = {
   // publicBus: string;
   // tale: string;
   // nameHistory: string;
-  // rating: string;
+  rating: string;
   // templeHistory: string;
   templeStay: string;
   // hotPlace: string;

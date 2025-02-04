@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PropertyCardProps } from "@/utils/types";
 import { motion } from "framer-motion";
+import { FaStar } from "react-icons/fa6";
 
 function PropertyCard({
   property,
@@ -18,6 +19,7 @@ function PropertyCard({
     address,
     name,
     mainImage,
+    rating,
   } = property;
 
   return (
@@ -47,7 +49,11 @@ function PropertyCard({
           />
         </div>
         <div className="flex justify-between items-center mx-1">
-          <h3 className="xl:text-base text-sm font-semibold">{name}</h3>
+          <h1 className="xl:text-base text-sm font-semibold">{name}</h1>
+          <div className="flex xl:text-sm text-xs items-center gap-x-2">
+            <FaStar className="text-yellow-500 mb-0.5" />
+            <p className="text-center">{rating}(출처 : 구글)</p>
+          </div>
         </div>
         <p className="xl:text-sm text-xs mx-1 mt-1">{title}</p>
         <div className="flex justify-between mx-1 items-center my-1">

@@ -114,11 +114,7 @@ export default function RootLayout({
             <Navbar />
             <Container>
               <PageTransition>
-                <main className="container py-5">
-                  {children}
-                  {modal}
-                  <div id="modal-root" />
-                </main>
+                <main className="container py-5">{children}</main>
               </PageTransition>
             </Container>
             <Footer />

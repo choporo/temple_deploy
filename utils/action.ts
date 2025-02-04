@@ -115,7 +115,7 @@ export const fetchProperties = async ({
         name: true,
         title: true,
         address: true,
-        // rating: true,
+        rating: true,
         templeStay: true,
         category: true,
     },
@@ -158,7 +158,6 @@ export const fetchPropertyDetails = async (id: string) => {
     },
     select:{
         image1: true,
-        id: true,
         name: true,
         title: true,
         address: true,

@@ -1,5 +1,4 @@
 import BreadCrumbs from "@/components/properties/BreadsCrumbs";
-import ShareButton from "@/components/properties/ShareButton";
 import { Separator } from "@/components/ui/separator";
 import { fetchPropertyDetails } from "@/utils/action";
 import { redirect } from "next/navigation";
@@ -45,7 +44,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     title,
     rating,
     image1,
-    id,
     nameHistory,
     templeHistory,
     tale,
@@ -63,23 +61,35 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     <section>
       <BreadCrumbs category={category} name={name} />
       <header className="flex justify-between items-center mt-2">
-        <h1 className="sm:text-2xl text-base tracking-wider font-bold">
+        {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
+          {name}
+        </h1> */}
+        {/* <h2 className="sm:text-2xl text-base tracking-wider font-bold">
           {title}
-        </h1>
-        <div className="sm:flex hidden text-sm lg:text-base items-center gap-x-2">
-          <FaStar className="text-yellow-500 mb-0.5" />
-          <h4 className="text-center">{rating}(출처 : 구글)</h4>
-          <div className="hidden sm:flex">
-            <ShareButton name={name} propertyId={id} />
-          </div>
-        </div>
+        </h2> */}
       </header>
       <ImageContainer mainImage={image1} name={name} />
-      <section className="mt-5">
+      <section className="mt-4">
         <div>
-          <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
+          <div className="flex justify-between items-center mx-1">
+            <div className="flex items-center">
+              <h1 className="sm:text-2xl text-base tracking-wider font-bold">
+                {name}
+              </h1>
+              <h2 className="hidden sm:flex sm:text-xl font-semibold tracking-wider ml-1">
+                - {title}
+              </h2>
+            </div>
+
+            <div className="md:flex hidden text-sm lg:text-base items-center gap-x-2">
+              <FaStar className="text-yellow-500 mb-0.5" />
+              <h4 className="text-center">{rating}(출처 : 구글)</h4>
+            </div>
+          </div>
+
+          {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
             {name}
-          </h1>
+          </h1> */}
           <p className="whitespace-pre-line tracking-wider text-sm mt-1 sm:text-base leading-loose first-letter:ml-1">
             {nameHistory}
           </p>
