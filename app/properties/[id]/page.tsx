@@ -76,14 +76,14 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
               <h1 className="sm:text-2xl text-base tracking-wider font-bold">
                 {name}
               </h1>
-              <h2 className="hidden sm:flex sm:text-xl font-semibold tracking-wider ml-1">
+              <p className="hidden sm:flex sm:text-xl font-semibold tracking-wider ml-1">
                 - {title}
-              </h2>
+              </p>
             </div>
 
             <div className="md:flex hidden text-sm lg:text-base items-center gap-x-2">
               <FaStar className="text-yellow-500 mb-0.5" />
-              <h4 className="text-center">{rating}(출처 : 구글)</h4>
+              <p className="text-center">{rating}(출처 : 구글)</p>
             </div>
           </div>
 
