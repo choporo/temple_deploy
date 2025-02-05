@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     default: "절로 가 | 국내 사찰여행",
-    template: "%s | 절로 가",
+    template: "%s | 국내 사찰여행 - 절로 가",
   },
   description: "가볼 만한 국내 사찰 명소 소개",
   twitter: {

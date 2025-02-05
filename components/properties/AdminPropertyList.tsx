@@ -21,17 +21,17 @@ async function AdminPropertyList({ category }: { category: string }) {
         <TableHeader>
           <TableRow>
             <TableHead className="text-center">사찰명</TableHead>
-            <TableHead className="text-center">타이틀</TableHead>
+            {/* <TableHead className="text-center">타이틀</TableHead> */}
             <TableHead className="text-center">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {items.map((item) => {
-            const { id: propertyId, name, title } = item;
+            const { id: propertyId, name } = item;
             return (
               <TableRow key={propertyId} className="text-center">
                 <TableCell>{name}</TableCell>
-                <TableCell>{title}</TableCell>
+                {/* <TableCell>{title}</TableCell> */}
                 <TableCell className="flex items-center justify-center">
                   <Link href={`/admin/${propertyId}/edit`} passHref>
                     <IconButton actionType="edit"></IconButton>
