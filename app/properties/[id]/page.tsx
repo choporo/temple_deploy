@@ -73,7 +73,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
         <div>
           <div className="flex justify-between items-center mx-1">
             <div className="flex items-center">
-              <h1 className="sm:text-2xl text-base tracking-wider font-bold">
+              <h1 className="sm:text-2xl text-base tracking-wider font-pretendard_bold">
                 {name}
               </h1>
               <p className="hidden sm:flex sm:text-xl font-semibold tracking-wider ml-1">
@@ -81,16 +81,16 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
               </p>
             </div>
 
-            <div className="md:flex hidden text-sm lg:text-base items-center gap-x-2">
+            <div className="md:flex hidden text-base font-pretendard_bold items-center gap-x-2 mx-1">
               <FaStar className="text-yellow-500 mb-0.5" />
-              <p className="text-center">{rating}(출처 : 구글)</p>
+              <p className="text-center">{rating}</p>
             </div>
           </div>
 
           {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
             {name}
           </h1> */}
-          <p className="whitespace-pre-line tracking-wider text-sm mt-1 sm:text-base leading-loose first-letter:ml-1">
+          <p className="whitespace-pre-line tracking-wider text-sm mt-2 sm:text-base leading-loose first-letter:ml-1">
             {nameHistory}
           </p>
           <Separator className="my-4" />

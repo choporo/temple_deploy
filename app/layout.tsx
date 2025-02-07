@@ -92,6 +92,20 @@ const jalnan = localFont({
   variable: "--font-jalnan",
 });
 
+const pretendard = localFont({
+  src: "../public/fonts/pretendard.otf",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
+
+const pretendard_bold = localFont({
+  src: "../public/fonts/pretendard_bold.otf",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
+
 export default function RootLayout({
   children,
   modal,
@@ -105,7 +119,7 @@ export default function RootLayout({
         <head>
           <GoogleAdSense />
         </head>
-        <body className={inter.className}>
+        <body className={pretendard.className}>
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}

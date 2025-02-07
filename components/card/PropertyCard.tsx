@@ -48,19 +48,21 @@ function PropertyCard({
             className="p-1 rounded-md object-cover transform group-hover:scale-110 transition-transform duration-500 "
           />
         </div>
-        <div className="flex justify-between items-center mx-1">
-          <h1 className="xl:text-base text-sm font-semibold">{name}</h1>
-          <div className="flex xl:text-sm text-xs items-center gap-x-2">
+        <div className="flex justify-between items-center mx-2">
+          <h1 className="xl:text-base text-sm font-pretendard_bold tracking-wider">
+            {name}
+          </h1>
+          <div className="flex xl:text-sm text-xs items-center gap-x-2 tracking-wide">
             <FaStar className="text-yellow-500 mb-0.5" />
-            <p className="text-center">{rating}(출처 : 구글)</p>
+            <p className="text-center">{rating}</p>
           </div>
         </div>
-        <p className="xl:text-sm text-xs mx-1 mt-1">{title}</p>
-        <div className="flex justify-between mx-1 items-center my-1">
+        <p className="xl:text-sm text-xs mx-2 mt-1 tracking-wide">{title}</p>
+        <div className="flex justify-between mx-2 items-center my-1 tracking-wide">
           <p className="xl:text-sm text-xs ">
             {address.split(" ")[0]} {address.split(" ")[1]}
           </p>
-          <p className="xl:text-sm text-xs mr-1">{templeStay}</p>
+          <p className="xl:text-sm text-xs ">{templeStay}</p>
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5"></div>

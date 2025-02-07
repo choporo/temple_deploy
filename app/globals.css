@@ -51,6 +51,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: pretendard;
+  src: url("../public/fonts/pretendard.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: pretendard_bold;
+  src: url("../public/fonts/pretendard_bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-border;
