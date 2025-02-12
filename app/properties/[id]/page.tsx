@@ -90,7 +90,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
             {name}
           </h1> */}
-          <p className="whitespace-pre-line tracking-wider text-sm mt-2 sm:text-base leading-loose first-letter:ml-1">
+          <p className="whitespace-pre-line tracking-wider text-sm mt-2 sm:text-base leading-loose text-justify first-letter:ml-1">
             {nameHistory}
           </p>
           <Separator className="my-4" />
