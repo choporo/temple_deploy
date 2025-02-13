@@ -13,7 +13,7 @@ const FooterAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container w-full">
+    <div className="googleAd-container w-full sm:hidden flex">
       <ins
         className="adsbygoogle"
         style={{ display: "block " }}
