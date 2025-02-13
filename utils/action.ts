@@ -111,7 +111,7 @@ export const fetchProperties = async ({
       ]
     },
     orderBy: {
-      category : "asc",
+      updatedAt:"desc",
     },
     select: {
       mainImage: true,

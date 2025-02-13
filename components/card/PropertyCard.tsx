@@ -62,7 +62,9 @@ function PropertyCard({
           <p className="xl:text-sm text-xs ">
             {address.split(" ")[0]} {address.split(" ")[1]}
           </p>
-          <p className="xl:text-sm text-xs ">{templeStay}</p>
+          <p className="xl:text-sm text-xs ">
+            {templeStay === "-" ? "" : templeStay}
+          </p>
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5"></div>
