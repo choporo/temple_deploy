@@ -31,8 +31,8 @@ function NavSearch() {
   return (
     <Input
       type="text"
-      className="max-w-32 md:max-w-52 lg:max-w-xl dark:bg-muted text-xs"
-      placeholder="사찰명 또는 지역을 입력하세요"
+      className="max-w-48 sm:max-w-80 lg:max-w-xl dark:bg-muted text-xs "
+      placeholder="원하는 검색어를 입력해 주세요"
       value={search}
       onChange={(e) => {
         setSearch(e.target.value);
