@@ -23,19 +23,21 @@ export const metadata: Metadata = {
 function AboutPage() {
   return (
     <article>
-      <div className="hidden sm:grid">
-        <h1 className="text-2xl font-pretendard_bold text-green-700 tracking-wider text-center my-4">
-          불교 용어
-          <span className="text-gray-800 text-base"> & </span>
-          <span className=" text-orange-800 ">건축물</span>
-        </h1>
-        <AboutTemple />
-        <AboutBuddha />
-        <FooterAds />
-        <AboutFourProducts />
-        <AboutPortal />
+      <div>
+        <div className="hidden sm:grid">
+          <h1 className="text-2xl font-pretendard_bold text-green-700 tracking-wider text-center my-4">
+            불교 용어
+            <span className="text-gray-800 text-base"> & </span>
+            <span className=" text-orange-800 ">건축물</span>
+          </h1>
+          <AboutTemple />
+          <AboutBuddha />
+          <FooterAds />
+          <AboutFourProducts />
+          <AboutPortal />
+        </div>
+        <MobileVersion />
       </div>
-      <MobileVersion />
     </article>
   );
 }

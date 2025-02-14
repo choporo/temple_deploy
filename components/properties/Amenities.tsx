@@ -39,7 +39,9 @@ function Amenities({
         </div>
         <div className="flex items-center gap-x-4 my-5">
           <FaBed className="sm:h-5 h-4 sm:w-5 w-4" />
-          <span className="text-sm tracking-wider">{templeStay}</span>
+          <span className="text-sm tracking-wider">
+            {templeStay === "-" ? "템플스테이 미운영" : templeStay}
+          </span>
         </div>
         <div className="flex items-center gap-x-4 my-5">
           <FaWonSign className="sm:h-5 h-4 sm:w-5 w-4" />
