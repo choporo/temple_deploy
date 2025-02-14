@@ -32,7 +32,9 @@ export function TempleMap({ lat, lon }: { lat: string; lon: string }) {
     };
     initMap();
   }, []);
-  return <div className="h-[400px] sm:h-[550px]" ref={mapRef} />;
+  return (
+    <div className="h-[400px] sm:h-[550px] mb-10 rounded-lg" ref={mapRef} />
+  );
 }
 
 export default TempleMap;

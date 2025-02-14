@@ -99,10 +99,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
             templeStay={templeStay}
           />
           <Separator className="mt-4 mb-6" />
-          <div id="Adscode" className="w-full">
-            <FooterAds />
-          </div>
-          <Separator className="mt-4 mb-6" />
           <HistoryDescription title="사찰 연혁" description={templeHistory} />
           <div className="my-5">
             <Description title="관련 설화" description={tale} />
