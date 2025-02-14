@@ -103,7 +103,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <div className="my-5">
             <Description title="관련 설화" description={tale} />
           </div>
-          <TempleMap lat={latitude} lon={longitude} />
+          <TempleMap lat={latitude} lon={longitude} name={name} />
         </div>
       </section>
     </section>

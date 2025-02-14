@@ -4,9 +4,7 @@ import AboutTemple from "@/components/about/AboutTemple";
 import AboutBuddha from "@/components/about/AboutBuddha";
 import AboutFourProducts from "@/components/about/AboutFourProducts";
 import AboutPortal from "@/components/about/AboutPortal";
-import FooterAds from "@/components/ads/FooterAds";
 import MobileVersion from "@/components/about/MobileVersion";
-import InArticleAds from "@/components/ads/InArticleAds";
 
 export const metadata: Metadata = {
   title: "알기 쉬운 불교 관련 용어",
@@ -33,9 +31,9 @@ function AboutPage() {
           </h1>
           <AboutTemple />
           <AboutBuddha />
-          <div id="Adscode" className="w-full">
+          {/* <div id="Adscode" className="w-full">
             <FooterAds />
-          </div>
+          </div> */}
           <AboutFourProducts />
           <AboutPortal />
         </div>
