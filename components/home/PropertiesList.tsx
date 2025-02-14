@@ -5,7 +5,13 @@ import PropertyCard from "../card/PropertyCard";
 import type { PropertyCardProps } from "@/utils/types";
 import PaginationSection from "../properties/PaginationSection";
 
-function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
+function PropertiesList({
+  properties,
+  category,
+}: {
+  properties: PropertyCardProps[];
+  category?: string;
+}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
 
@@ -19,11 +25,10 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
         <span className="text-yellow-500 text-sm">★</span> 출처 : Google
       </p>
       <section className="mt-4 gap-8 grid sm:grid-cols-2  lg:grid-cols-3  ">
-        {currentItems.map((property, index) => {
-          return (
-            <PropertyCard key={property.id} property={property} index={index} />
-          );
-        })}
+        {currentItems.map((property, index) => (
+          <PropertyCard key={property.id} property={property} index={index} />
+        ))}
+        {currentItems.length < 6 ? <InFeedAds /> : null}
       </section>
       <div className="my-5">
         <PaginationSection

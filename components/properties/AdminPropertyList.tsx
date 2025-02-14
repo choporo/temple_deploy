@@ -1,4 +1,9 @@
-import { deletePropertyAction, fetchProperties } from "@/utils/action";
+"use client";
+import {
+  deletePropertyAction,
+  fetchAdminProperties,
+  fetchProperties,
+} from "@/utils/action";
 import {
   Table,
   TableBody,
@@ -11,13 +16,30 @@ import {
 import Link from "next/link";
 import { IconButton } from "../form/Button";
 import FormContainer from "../form/FormContainer";
+import { useEffect, useState } from "react";
+import { AdminProps } from "@/utils/types";
+import PaginationSection from "./PaginationSection";
 
-async function AdminPropertyList({ category }: { category: string }) {
-  const items = await fetchProperties({ category });
+function AdminPropertyList({ category }: { category?: string }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const [posts, setPosts] = useState<AdminProps[]>([]);
+  const lastItemIndex = currentPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
+  const currentItems = posts.slice(firstItemIndex, lastItemIndex);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const properties: AdminProps[] = await fetchAdminProperties({ category });
+      setPosts(properties);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div>
       <Table className="text-xs">
-        <TableCaption className="text-start">총 {items.length}건</TableCaption>
+        <TableCaption className="text-start">총 {posts.length}건</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="text-center">사찰명</TableHead>
@@ -26,7 +48,7 @@ async function AdminPropertyList({ category }: { category: string }) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {items.map((item) => {
+          {currentItems.map((item) => {
             const { id: propertyId, name } = item;
             return (
               <TableRow key={propertyId} className="text-center">
@@ -43,6 +65,14 @@ async function AdminPropertyList({ category }: { category: string }) {
           })}
         </TableBody>
       </Table>
+      <div className="my-5">
+        <PaginationSection
+          totalItems={posts.length}
+          itemsPerPage={itemsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
     </div>
   );
 }

@@ -127,6 +127,27 @@ export const fetchProperties = async ({
   return properties;
 };
 
+export const fetchAdminProperties = async ({
+  category,
+}: {
+  category?: string;
+}) => {
+  const properties = await db.property.findMany({
+    where: {
+      category
+    },
+    orderBy: {
+      updatedAt:"desc",
+    },
+    select: {
+        id: true,
+        name: true,
+        category: true,
+    },
+  });
+  return properties;
+};
+
 export const fetchPropertyEdit= async (id: string) => {
   return db.property.findUnique({
     where: {

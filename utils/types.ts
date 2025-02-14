@@ -25,3 +25,9 @@ export type PropertyCardProps = {
   // hotPlace: string;
 };
 
+export type AdminProps = {
+id: string,
+name: string,
+category: string,
+}
+

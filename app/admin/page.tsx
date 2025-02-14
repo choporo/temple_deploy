@@ -17,6 +17,9 @@ function AdminPropertyPage() {
       <div>
         <Tabs defaultValue="서울" className="mx-auto">
           <TabsList className="justify-around w-full">
+            <TabsTrigger value="전체" className="text-xs">
+              전체
+            </TabsTrigger>
             <TabsTrigger value="서울" className="text-xs">
               서울
             </TabsTrigger>
@@ -60,6 +63,9 @@ function AdminPropertyPage() {
               경북
             </TabsTrigger>
           </TabsList>
+          <TabsContent value="전체">
+            <AdminPropertyList />
+          </TabsContent>
           <TabsContent value="서울">
             <AdminPropertyList category={"서울"} />
           </TabsContent>
