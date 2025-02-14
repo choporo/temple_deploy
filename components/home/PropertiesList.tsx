@@ -28,7 +28,9 @@ function PropertiesList({
         {currentItems.map((property, index) => (
           <PropertyCard key={property.id} property={property} index={index} />
         ))}
-        {currentItems.length < 6 ? <InFeedAds /> : null}
+        {currentItems.length < 6 && currentItems.length !== 3 ? (
+          <InFeedAds />
+        ) : null}
       </section>
       <div className="my-5">
         <PaginationSection
