@@ -16,9 +16,9 @@ async function PropertiesContainer({
   });
 
   if (properties.length === 0) {
-    return <EmptyList heading="등록된 사찰 정보가 없습니다" btnText="Home" />;
+    return <EmptyList heading="등록된 사찰 정보가 없습니다" btnText="메인" />;
   }
 
-  return <PropertiesList properties={properties} />;
+  return <PropertiesList properties={properties} category={category} />;
 }
 export default PropertiesContainer;
