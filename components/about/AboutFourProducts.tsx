@@ -6,18 +6,21 @@ import { fourProducts } from "@/utils/aboutTemple";
 function AboutFourProducts() {
   return (
     <article className="text-justify">
-      <h2 className="text-lg mb-2 mt-10 font-semibold">3. 사찰의 사물(四物)</h2>
-      <p className="mx-2 first-letter:ml-1 text-sm leading-loose mb-2">
+      <h2 className="text-lg text-center sm:text-start  mb-1 sm:mt-10 font-pretendard_bold tracking-wider">
+        3. 사찰의 사물(四物)
+      </h2>
+      <p className="tracking-wider text-xs/loose sm:text-sm/loose sm:mb-2">
         {fourProducts[4].label}
       </p>
-      <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
-        <div className="lg:col-span-5 tracking-wide text-sm leading-loose">
-          <p className="mb-2 first-letter:ml-1">{fourProducts[0].label}</p>
-          <p className="mb-2 first-letter:ml-1">{fourProducts[1].label}</p>
-          <p className="mb-2 first-letter:ml-1">{fourProducts[2].label}</p>
-          <p className="mb-2 first-letter:ml-1">{fourProducts[3].label}</p>
+      <div className="sm:mx-2 sm:grid sm:gap-y-3 sm:grid-cols-12 lg:gap-x-5">
+        <div className="lg:col-span-5 ">
+          {fourProducts.map((item, index) => (
+            <p className="tracking-wider text-xs/loose sm:text-sm/loose sm:mb-2 ">
+              {index < 4 ? item.label : null}
+            </p>
+          ))}
         </div>
-        <div className="lg:col-span-7 relative h-full">
+        <div className="grid sm:col-span-7 relative h-full">
           <Image
             src={bumgo}
             alt="bumgo"
@@ -26,9 +29,9 @@ function AboutFourProducts() {
               objectPosition: "50% 60%",
             }}
             sizes="100vw"
-            className="w-full h-48 rounded object-cover items-center"
+            className="w-full sm:h-48 h-24 rounded object-cover items-center"
           />
-          <p className="text-center tracking-widest text-sm">
+          <p className="text-center tracking-widest text-xs sm:text-sm mt-1">
             {"<"}장안사 - 범종각{">"}
           </p>
         </div>

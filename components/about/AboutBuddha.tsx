@@ -3,17 +3,17 @@ import Image from "next/image";
 import { sanctum } from "@/utils/aboutTemple";
 import daewoong from "@/public/image/daewoong.jpg";
 
-function AboutTemple() {
+function AboutBuddha() {
   return (
     <article className="text-justify">
-      <h2 className="text-lg mb-2 mt-10 font-semibold">
+      <h2 className="sm:text-lg text-base sm:mb-2 sm:mt-10 font-pretendard_bold">
         2. 전각(殿閣)의 종류 -{" "}
         <span className="text-sm">
           불상을 모신 곳은 전(殿), 그 외는 각(閣)이라고 함
         </span>
       </h2>
-      <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
-        <div className="lg:col-span-5 relative h-full hidden lg:grid">
+      <div className="mx-2 sm:grid sm:gap-y-3 sm:grid-cols-12 lg:gap-x-5">
+        <div className="sm:col-span-5 relative h-full hidden sm:grid">
           <Image
             src={daewoong}
             alt="daewoong_jeon"
@@ -28,44 +28,22 @@ function AboutTemple() {
             {"<"}수덕사 - 대웅전{">"}
           </p>
         </div>
-        <div className="lg:col-span-7  tracking-wide text-sm leading-loose">
-          <p className="mb-2 first-letter:ml-1">{sanctum[0].label}</p>
-          <p className="mb-2 first-letter:ml-1">{sanctum[1].label}</p>
-          <p className="mb-2 first-letter:ml-1">{sanctum[2].label}</p>
-          <p className="mb-2 first-letter:ml-1">{sanctum[3].label}</p>
-          <p className="mb-2 first-letter:ml-1">{sanctum[4].label}</p>
-          <p className="mb-2 first-letter:ml-1">{sanctum[5].label}</p>
-          <p className="mb-2 first-letter:ml-1">{sanctum[6].label}</p>
-          <p className="mb-2 first-letter:ml-1 flex lg:hidden">
-            &nbsp;{sanctum[7].label}
-          </p>
-          <p className="mb-2 flex lg:hidden">&nbsp;{sanctum[8].label}</p>
-          <p className="mb-2 flex lg:hidden">&nbsp;{sanctum[9].label}</p>
-          <p className="mb-2 flex lg:hidden">&nbsp;{sanctum[10].label}</p>
-          <p className="mb-2 flex lg:hidden">&nbsp;{sanctum[11].label}</p>
-          <p className="mb-2 flex lg:hidden">&nbsp;{sanctum[12].label}</p>
+        <div className="sm:col-span-7 tracking-wide text-justify ">
+          {sanctum.map((item, index) => (
+            <p className="sm:mb-2 text-xs/loose sm:text-sm/loose">
+              {index < 7 ? item.label : null}
+            </p>
+          ))}
         </div>
       </div>
-
-      <p className="mx-2  mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
-        &nbsp;{sanctum[7].label}
-      </p>
-      <p className="mx-2 mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
-        &nbsp;{sanctum[8].label}
-      </p>
-      <p className="mx-2 mb-2 hidden lg:flex tracking-wide text-sm leading-loose">
-        &nbsp;{sanctum[9].label}
-      </p>
-      <p className="mx-2 mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
-        &nbsp;{sanctum[10].label}
-      </p>
-      <p className="mx-2 mb-2 hidden lg:flex  tracking-wide text-sm leading-loose">
-        &nbsp;{sanctum[11].label}
-      </p>
-      <p className="mx-2 mb-2 hidden lg:flex tracking-wide text-sm leading-loose">
-        &nbsp;{sanctum[12].label}
-      </p>
-      <div className="lg:col-span-5 relative h-full lg:hidden grid">
+      <div>
+        {sanctum.map((item, index) => (
+          <p className="text-xs/loose sm:text-sm/loose tracking-wider sm:mb-2">
+            {index > 7 ? item.label : null}{" "}
+          </p>
+        ))}
+      </div>
+      <div className="lg:col-span-5 relative h-full sm:hidden grid">
         <Image
           src={daewoong}
           alt="daewoong_jeon"
@@ -84,4 +62,4 @@ function AboutTemple() {
   );
 }
 
-export default AboutTemple;
+export default AboutBuddha;

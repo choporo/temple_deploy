@@ -25,7 +25,7 @@ function PropertiesList({ properties }: { properties: PropertyCardProps[] }) {
           );
         })}
       </section>
-      <div className="mt-5">
+      <div className="my-5">
         <PaginationSection
           totalItems={properties.length}
           itemsPerPage={itemsPerPage}

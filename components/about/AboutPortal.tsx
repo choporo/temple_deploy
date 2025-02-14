@@ -6,9 +6,11 @@ import { portal } from "@/utils/aboutTemple";
 function AboutPortal() {
   return (
     <article className="text-justify">
-      <h2 className="text-lg mb-2 mt-10 font-semibold">4. 사찰의 문(門)</h2>
+      <h2 className="sm:text-lg sm:text-start text-center mb-2 sm:mt-10 font-pretendard_bold tracking-wider">
+        4. 사찰의 문(門)
+      </h2>
       <div className="mx-2 grid gap-y-3 lg:grid-cols-12 lg:gap-x-5">
-        <div className="lg:col-span-5 relative h-full hidden lg:grid">
+        <div className="lg:col-span-5 relative h-full hidden sm:grid">
           <Image
             src={bulyimun}
             alt="bulyimun"
@@ -17,20 +19,21 @@ function AboutPortal() {
               objectPosition: "50% 60%",
             }}
             sizes="100vw"
-            className="w-full h-72 rounded object-cover"
+            className="w-full sm:h-72 h-32 rounded object-cover"
           />
           <p className="text-center tracking-widest text-sm ">
             {"<"}건봉사 - 불이문{">"}
           </p>
         </div>
-        <div className="lg:col-span-7 tracking-wide text-sm leading-loose">
-          <p className="mb-2  first-letter:ml-1">{portal[0].label}</p>
-          <p className="mb-2 first-letter:ml-1">{portal[1].label}</p>
-          <p className="mb-2 first-letter:ml-1">{portal[2].label}</p>
-          <p className="mb-2 first-letter:ml-1">{portal[3].label}</p>
+        <div className="lg:col-span-7 tracking-wide ">
+          {portal.map((item) => (
+            <p className="sm:text-sm/loose text-xs/loose sm:mb-2">
+              {item.label}
+            </p>
+          ))}
         </div>
       </div>
-      <div className="lg:col-span-5 relative h-full lg:hidden grid">
+      <div className="sm:hidden grid">
         <Image
           src={bulyimun}
           alt="daewoong_jeon"
@@ -39,11 +42,11 @@ function AboutPortal() {
             objectPosition: "50% 60%",
           }}
           sizes="100vw"
-          className="w-full h-80 rounded object-cover"
+          className="w-full h-40 rounded object-cover"
         />
-        <h6 className="text-center tracking-widest text-sm">
+        <p className="text-center tracking-widest text-xs">
           {"<"}건봉사 - 불이문{">"}
-        </h6>
+        </p>
       </div>
     </article>
   );
