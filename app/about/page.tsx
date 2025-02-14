@@ -33,7 +33,9 @@ function AboutPage() {
           </h1>
           <AboutTemple />
           <AboutBuddha />
-          <InArticleAds />
+          <div id="Adscode" className="w-full">
+            <FooterAds />
+          </div>
           <AboutFourProducts />
           <AboutPortal />
         </div>

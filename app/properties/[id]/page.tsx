@@ -86,10 +86,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
               <p className="text-center">{rating}</p>
             </div>
           </div>
-
-          {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
-            {name}
-          </h1> */}
           <p className="whitespace-pre-line tracking-wider text-sm mt-2 sm:text-base leading-loose text-justify first-letter:ml-1">
             {nameHistory}
           </p>
@@ -103,7 +99,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
             templeStay={templeStay}
           />
           <Separator className="mt-4 mb-6" />
-          <FooterAds />
+          <div id="Adscode" className="w-full">
+            <FooterAds />
+          </div>
           <Separator className="mt-4 mb-6" />
           <HistoryDescription title="사찰 연혁" description={templeHistory} />
           <div className="my-5">
