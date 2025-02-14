@@ -6,7 +6,7 @@ function Logo() {
   return (
     <div className="md:ml-2 items-center">
       <Link href="/" passHref className="flex gap-x-1 justify-center">
-        <h2 className="sm:text-2xl text-sm mt-1 sm:mt-2 text-center text-orange-800 font-jalnan tracking-widest font-extrabold ">
+        <h2 className="sm:text-2xl text-base mt-1 sm:mt-2 text-center text-orange-800 font-jalnan tracking-widest font-extrabold ">
           절로<span className="text-green-700 "> 가</span>
         </h2>
         <Image

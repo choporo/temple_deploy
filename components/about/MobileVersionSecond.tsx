@@ -5,7 +5,7 @@ import daewoong from "@/public/image/daewoong.jpg";
 export default function MobileVersionSecond() {
   return (
     <article className="text-justify">
-      <div className="tracking-wider text-xs/loose ">
+      <div className="tracking-wider text-sm/loose ">
         {temple.map((item, index) => (
           <p className="my-2">{index > 7 ? item.label : null}</p>
         ))}

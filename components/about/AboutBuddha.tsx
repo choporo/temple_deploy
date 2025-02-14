@@ -6,14 +6,14 @@ import daewoong from "@/public/image/daewoong.jpg";
 function AboutBuddha() {
   return (
     <article className="text-justify">
-      <h2 className="sm:text-lg text-base sm:mb-2 sm:mt-10 font-pretendard_bold">
-        2. 전각(殿閣)의 종류 -{" "}
+      <h2 className="sm:text-xl text-base sm:mb-2 sm:mt-10 font-pretendard_bold">
+        2. 전각(殿閣)의 종류
         <span className="text-sm">
-          불상을 모신 곳은 전(殿), 그 외는 각(閣)이라고 함
+          &nbsp;- 불상을 모신 곳은 전(殿), 그 외는 각(閣)이라고 함
         </span>
       </h2>
-      <div className="mx-2 sm:grid sm:gap-y-3 sm:grid-cols-12 lg:gap-x-5">
-        <div className="sm:col-span-5 relative h-full hidden sm:grid">
+      <div className="xl:grid xl:gap-y-3 lg:grid-cols-12 lg:gap-x-5">
+        <div className="xl:col-span-5 relative h-full hidden sm:grid">
           <Image
             src={daewoong}
             alt="daewoong_jeon"
@@ -28,18 +28,18 @@ function AboutBuddha() {
             {"<"}수덕사 - 대웅전{">"}
           </p>
         </div>
-        <div className="sm:col-span-7 tracking-wide text-justify ">
+        <div className="xl:col-span-7 tracking-wider text-justify ">
           {sanctum.map((item, index) => (
-            <p className="sm:mb-2 text-xs/loose sm:text-sm/loose">
-              {index < 7 ? item.label : null}
+            <p className="mb-1 tracking-wider text-justify text-xs/loose sm:text-base/loose">
+              {index < 6 ? item.label : null}
             </p>
           ))}
         </div>
       </div>
       <div>
         {sanctum.map((item, index) => (
-          <p className="text-xs/loose sm:text-sm/loose tracking-wider sm:mb-2">
-            {index > 7 ? item.label : null}{" "}
+          <p className="mb-1 tracking-wider text-justify text-xs/loose sm:text-base/loose">
+            {index > 6 ? item.label : null}{" "}
           </p>
         ))}
       </div>

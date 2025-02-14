@@ -7,7 +7,7 @@ function MobileVertionBuddhaSecond() {
     <article className="text-justify">
       <div className="tracking-wide text-justify ">
         {sanctum.map((item, index) => (
-          <p className="mb-2 text-xs/loose">{index > 7 ? item.label : null}</p>
+          <p className="mb-2 text-sm/loose">{index > 7 ? item.label : null}</p>
         ))}
       </div>
       <div className="sm:col-span-5 relative h-full ">

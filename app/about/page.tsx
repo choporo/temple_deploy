@@ -35,7 +35,7 @@ function AboutPage() {
         <AboutFourProducts />
         <AboutPortal />
       </div>
-      <MobileVersion className="flex sm:hidden" />
+      <MobileVersion />
     </article>
   );
 }

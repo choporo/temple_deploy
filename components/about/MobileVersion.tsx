@@ -11,7 +11,7 @@ import MobileVersionSecond from "./MobileVersionSecond";
 import MobileVertionBuddhaFirst from "./MobileVertionBuddhaFirst";
 import MobileVertionBuddhaSecond from "./MobileVertionBuddhaSecond";
 
-function MobileVersion({ className }: { className: string }) {
+function MobileVersion({ className }: { className?: string }) {
   const items = [
     <MobileVersionFirst key={0} />,
     <MobileVersionSecond key={1} />,
@@ -45,58 +45,58 @@ function MobileVersion({ className }: { className: string }) {
   }, [index]);
 
   return (
-    <div className={`sm:px-32 px-1 ${className}`}>
-      <div className="flex flex-col items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, x: -200 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="relative w-[300px] h-[600px] md:w-[700px] lg:w-[1000px] md:h-[700px] lg:h-[500px] flex items-center justify-center overflow-hidden"
+    <div
+      className={`flex sm:hidden flex-col items-center justify-center ${className}`}
+    >
+      <motion.div
+        initial={{ opacity: 0, x: -200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className="relative w-[350px] h-[700px] flex items-center justify-center overflow-hidden"
+      >
+        {items.map((item, index) => (
+          <motion.div
+            initial={{ x: "100%" }}
+            className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 p-3 rounded-md mt-3"
+            key={index}
+            ref={(el) => slides.current.push(el)}
+          >
+            {item}
+          </motion.div>
+        ))}
+      </motion.div>
+      <div className="flex gap-x-4 mt-5">
+        <Button
+          variant="ghost"
+          onClick={() => {
+            setDirection(true);
+            setIndex(index - 1);
+          }}
+          className={`${
+            index === 0
+              ? "opacity-30 pointer-events-none"
+              : "opacity-100 pointer-events-auto"
+          } hover:scale-150 transition-all`}
+          size="sm"
         >
-          {items.map((item, index) => (
-            <motion.div
-              initial={{ x: "100%" }}
-              className="absolute inset-0 flex flex-col items-center justify-center lg:border border-yellow-500 bg-zinc-50 p-3 rounded-md mt-3"
-              key={index}
-              ref={(el) => slides.current.push(el)}
-            >
-              {item}
-            </motion.div>
-          ))}
-        </motion.div>
-        <div className="flex gap-x-4 mt-5">
-          <Button
-            variant="ghost"
-            onClick={() => {
-              setDirection(true);
-              setIndex(index - 1);
-            }}
-            className={`${
-              index === 0
-                ? "opacity-30 pointer-events-none"
-                : "opacity-100 pointer-events-auto"
-            } hover:scale-150 transition-all`}
-            size="sm"
-          >
-            <IoIosArrowBack />
-          </Button>
-          <Button
-            variant="ghost"
-            onClick={() => {
-              setDirection(false);
-              setIndex(index + 1);
-            }}
-            className={`${
-              index === items.length - 1
-                ? "opacity-30 pointer-events-none"
-                : "opacity-100 pointer-events-auto"
-            } hover:scale-150 transition-all`}
-            size="sm"
-          >
-            <IoIosArrowForward />
-          </Button>
-        </div>
+          <IoIosArrowBack />
+        </Button>
+        <Button
+          variant="ghost"
+          onClick={() => {
+            setDirection(false);
+            setIndex(index + 1);
+          }}
+          className={`${
+            index === items.length - 1
+              ? "opacity-30 pointer-events-none"
+              : "opacity-100 pointer-events-auto"
+          } hover:scale-150 transition-all`}
+          size="sm"
+        >
+          <IoIosArrowForward />
+        </Button>
       </div>
     </div>
   );

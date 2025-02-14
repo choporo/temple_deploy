@@ -8,7 +8,7 @@ export default function MobileVersionFirst() {
         1. 불교 용어
       </h2>
       <div className="mx-2 lg:gap-x-5">
-        <div className="tracking-wider text-xs/loose">
+        <div className="tracking-wider text-sm/loose">
           {temple.map((item, index) => (
             <p className="my-2">{index < 8 ? item.label : null}</p>
           ))}
