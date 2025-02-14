@@ -45,9 +45,7 @@ function MobileVersion({ className }: { className?: string }) {
   }, [index]);
 
   return (
-    <div
-      className={`flex sm:hidden flex-col items-center justify-center ${className}`}
-    >
+    <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div
         initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}

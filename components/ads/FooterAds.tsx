@@ -9,14 +9,11 @@ declare global {
 
 const FooterAds = () => {
   useEffect(() => {
-    // (window.adsbygoogle = window.adsbygoogle || []).push({});
-    window.onload = function () {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    };
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
   }, []);
 
   return (
-    <div className="googleAd-container w-full sm:hidden flex">
+    <div className="googleAd-container w-full flex">
       <ins
         className="adsbygoogle"
         style={{ display: "block " }}

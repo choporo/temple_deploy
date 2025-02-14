@@ -6,6 +6,7 @@ import AboutFourProducts from "@/components/about/AboutFourProducts";
 import AboutPortal from "@/components/about/AboutPortal";
 import FooterAds from "@/components/ads/FooterAds";
 import MobileVersion from "@/components/about/MobileVersion";
+import InArticleAds from "@/components/ads/InArticleAds";
 
 export const metadata: Metadata = {
   title: "알기 쉬운 불교 관련 용어",
@@ -32,11 +33,13 @@ function AboutPage() {
           </h1>
           <AboutTemple />
           <AboutBuddha />
-          <FooterAds />
+          <InArticleAds />
           <AboutFourProducts />
           <AboutPortal />
         </div>
-        <MobileVersion />
+        <div className="sm:hidden flex">
+          <MobileVersion />
+        </div>
       </div>
     </article>
   );
