@@ -9,7 +9,10 @@ declare global {
 
 const FooterAds = () => {
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // (window.adsbygoogle = window.adsbygoogle || []).push({});
+    window.onload = function () {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    };
   }, []);
 
   return (
