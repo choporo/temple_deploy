@@ -10,6 +10,7 @@ import FooterAds from "@/components/ads/FooterAds";
 import { Metadata } from "next";
 import ImageContainer from "@/components/properties/ImageContainer";
 import HistoryDescription from "@/components/properties/HistoryDescription";
+import NaverMap from "@/components/map/NaverMap";
 
 export async function generateMetadata({
   params,
@@ -58,7 +59,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   } = property;
 
   return (
-    <section>
+    <section className="overflow-y-scroll">
       <BreadCrumbs category={category} name={name} />
       <header className="flex justify-between items-center mt-2">
         {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
@@ -103,7 +104,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           <div className="my-5">
             <Description title="관련 설화" description={tale} />
           </div>
-          <TempleMap lat={latitude} lon={longitude} name={name} />
+          {/* <TempleMap lat={latitude} lon={longitude} name={name} /> */}
+        </div>
+        <div>
+          <NaverMap loc={[Number(longitude), Number(latitude)]} />
         </div>
       </section>
     </section>

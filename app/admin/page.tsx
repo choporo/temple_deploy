@@ -15,9 +15,9 @@ function AdminPropertyPage() {
         <SignOutLink />
       </div>
       <div>
-        <Tabs defaultValue="서울" className="mx-auto">
+        <Tabs defaultValue="all" className="mx-auto">
           <TabsList className="justify-around w-full">
-            <TabsTrigger value="전체" className="text-xs">
+            <TabsTrigger value="all" className="text-xs">
               전체
             </TabsTrigger>
             <TabsTrigger value="서울" className="text-xs">
@@ -63,7 +63,7 @@ function AdminPropertyPage() {
               경북
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="전체">
+          <TabsContent value="all">
             <AdminPropertyList />
           </TabsContent>
           <TabsContent value="서울">
