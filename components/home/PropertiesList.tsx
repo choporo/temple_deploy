@@ -20,13 +20,13 @@ function PropertiesList({
   const currentItems = properties.slice(firstItemIndex, lastItemIndex);
 
   return (
-    <div>
+    <div className="sm:p-1 mt-2">
       <p className="text-xs mx-1 font-bold text-right tracking-wider text-red-700">
         <span className="text-yellow-500 text-sm">★</span> 출처 : Google
       </p>
       <section className="mt-4 gap-8 grid sm:grid-cols-2  lg:grid-cols-3  ">
         {currentItems.map((property, index) =>
-          properties.length > 50 && index === 4 ? (
+          properties.length > 50 && index === 5 ? (
             <InFeedAds key={index} />
           ) : (
             <PropertyCard key={property.id} property={property} index={index} />
