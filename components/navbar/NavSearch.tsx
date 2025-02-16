@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Input } from "../ui/input";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
+import { Button } from "../ui/button";
 
 function NavSearch() {
   const searchParams = useSearchParams();
