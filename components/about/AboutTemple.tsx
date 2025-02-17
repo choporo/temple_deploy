@@ -33,7 +33,10 @@ function AboutTemple() {
       </div>
       <div>
         {temple.map((item, index) => (
-          <p className="xl:col-span-7 mx-1 text-base/loose tracking-wider text-justify">
+          <p
+            className="xl:col-span-7 mx-1 text-base/loose tracking-wider text-justify"
+            key={index}
+          >
             {index > 7 ? item.label : null}
           </p>
         ))}

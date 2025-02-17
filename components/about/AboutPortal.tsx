@@ -26,8 +26,11 @@ function AboutPortal() {
           </p>
         </div>
         <div className="xl:col-span-7">
-          {portal.map((item) => (
-            <p className="sm:text-base/loose text-sm/loose  tracking-wider text-justify sm:mb-2">
+          {portal.map((item, index) => (
+            <p
+              className="sm:text-base/loose text-sm/loose  tracking-wider text-justify sm:mb-2"
+              key={index}
+            >
               {item.label}
             </p>
           ))}

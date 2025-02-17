@@ -10,7 +10,9 @@ export default function MobileVersionFirst() {
       <div className="mx-2 lg:gap-x-5">
         <div className="tracking-wider text-sm/loose">
           {temple.map((item, index) => (
-            <p className="my-2">{index < 8 ? item.label : null}</p>
+            <p className="my-2" key={index}>
+              {index < 8 ? item.label : null}
+            </p>
           ))}
         </div>
       </div>

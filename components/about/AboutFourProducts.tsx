@@ -15,7 +15,10 @@ function AboutFourProducts() {
       <div className="sm:grid sm:gap-y-3 xl:grid-cols-12 lg:gap-x-5">
         <div className="grid xl:col-span-5 ">
           {fourProducts.map((item, index) => (
-            <p className="tracking-wider sm:text-base/loose text-sm/loose sm:mb-1 ">
+            <p
+              className="tracking-wider sm:text-base/loose text-sm/loose sm:mb-1 "
+              key={index}
+            >
               {index < 4 ? item.label : null}
             </p>
           ))}
