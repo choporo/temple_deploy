@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 function AboutPage() {
   return (
     <article>
-      <div>
+      <div className="items-center">
         <div className="hidden sm:grid">
           <h1 className="text-2xl font-pretendard_bold text-green-700 tracking-wider text-center my-4">
             불교 용어
@@ -37,9 +37,7 @@ function AboutPage() {
           <AboutFourProducts />
           <AboutPortal />
         </div>
-        <div className="sm:hidden flex">
-          <MobileVersion />
-        </div>
+        <MobileVersion />
       </div>
     </article>
   );
