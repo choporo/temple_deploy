@@ -107,7 +107,8 @@ export const fetchProperties = async ({
         {address: {contains: search, mode: 'insensitive'}},
         {title: {contains: search, mode: 'insensitive'}},
         {templeStay: {contains: search, mode: 'insensitive'}},
-        {category: {contains: search, mode: 'insensitive'}}
+        {category: {contains: search, mode: 'insensitive'}},
+        {parking: {contains: search, mode: 'insensitive'}}
       ]
     },
     orderBy: {
@@ -122,6 +123,7 @@ export const fetchProperties = async ({
         rating: true,
         templeStay: true,
         category: true,
+        parking: true
     },
   });
   return properties;

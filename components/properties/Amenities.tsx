@@ -49,7 +49,9 @@ function Amenities({
         </div>
         <div className="flex items-center gap-x-4 my-5">
           <FaSquareParking className="sm:h-5 h-4 sm:w-5 w-4 " />
-          <span className="text-sm tracking-wider">{parking}</span>
+          <span className="text-sm tracking-wider">
+            {parking.split(":")[1]}
+          </span>
         </div>
       </div>
     </div>

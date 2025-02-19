@@ -67,7 +67,6 @@ const config: Config = {
       },
     },
     fontFamily: {
-      laundry: ["laundry"],
       jalnan: ["jalnan"],
       pretendard:["pretendard"],
       pretendard_bold:["pretendard_bold"]

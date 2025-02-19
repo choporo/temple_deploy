@@ -96,7 +96,7 @@ async function EditPage({ params }: { params: { id: string } }) {
             <FormInput
               type="text"
               name="parking"
-              label="주차"
+              label="주차비"
               defaultValue={parking}
             />
             <FormInput

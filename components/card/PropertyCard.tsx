@@ -20,6 +20,7 @@ function PropertyCard({
     name,
     mainImage,
     rating,
+    parking,
   } = property;
 
   return (
@@ -58,13 +59,21 @@ function PropertyCard({
           </div>
         </div>
         <p className="xl:text-sm text-xs mx-2 mt-1 tracking-wide">{title}</p>
-        <div className="flex justify-between mx-2 items-center my-1 tracking-wide">
-          <p className="xl:text-sm text-xs ">
-            {address.split(" ")[0]} {address.split(" ")[1]}
-          </p>
-          <p className="xl:text-sm text-xs ">
-            {templeStay === "-" ? "" : templeStay}
-          </p>
+        <div className="flex justify-between mx-2 items-center my-1 tracking-wide xl:text-sm text-xs ">
+          <div className="flex">
+            <p>
+              {address.split(" ")[0]} {address.split(" ")[1]}
+            </p>
+
+            {parking.split(":")[1] === "무료" ? null : (
+              <p>
+                {"("}주차:
+                {parking.split(":")[1]}
+                {")"}
+              </p>
+            )}
+          </div>
+          <p>{templeStay === "-" ? "" : templeStay}</p>
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5"></div>

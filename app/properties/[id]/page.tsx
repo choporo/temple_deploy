@@ -61,14 +61,6 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   return (
     <section className="overflow-y-scroll">
       <BreadCrumbs category={category} name={name} />
-      <header className="flex justify-between items-center mt-2">
-        {/* <h1 className="sm:text-2xl text-lg font-bold tracking-wider ml-1">
-          {name}
-        </h1> */}
-        {/* <h2 className="sm:text-2xl text-base tracking-wider font-bold">
-          {title}
-        </h2> */}
-      </header>
       <ImageContainer mainImage={image1} name={name} />
       <section className="mt-4">
         <div>
@@ -77,11 +69,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
               <h1 className="sm:text-2xl text-base tracking-wider font-pretendard_bold">
                 {name}
               </h1>
-              <p className="hidden sm:flex sm:text-xl font-semibold tracking-wider ml-1">
+              <h2 className="hidden sm:flex sm:text-xl font-semibold tracking-wider ml-1">
                 - {title}
-              </p>
+              </h2>
             </div>
-
             <div className="md:flex hidden text-base font-pretendard_bold items-center gap-x-2 mx-1">
               <FaStar className="text-yellow-500 mb-0.5" />
               <p className="text-center">{rating}</p>

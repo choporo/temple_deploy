@@ -78,13 +78,6 @@ export const metadata: Metadata = {
   },
 };
 
-const laundry = localFont({
-  src: "../public/fonts/laundry.woff",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-laundry",
-});
-
 const jalnan = localFont({
   src: "../public/fonts/Jalnan.otf",
   display: "swap",
@@ -108,10 +101,8 @@ const pretendard_bold = localFont({
 
 export default function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
   return (
     <ClerkProvider>
@@ -123,7 +114,6 @@ export default function RootLayout({
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}
-
           <Providers>
             <Navbar />
             <Container>

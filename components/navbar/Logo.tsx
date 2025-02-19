@@ -12,7 +12,7 @@ function Logo() {
         <Image
           src={moktak}
           alt="목탁"
-          className="hidden sm:flex sm:w-10 sm:h-10 sm:mt-0.5"
+          className="hidden sm:flex w-10 h-10 mt-0.5"
         />
       </Link>
     </div>

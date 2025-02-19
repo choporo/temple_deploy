@@ -9,12 +9,14 @@ const nextConfig = {
     }
   },
   images: {
+    minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "pbshgdpsuzsoyipensta.supabase.co",
       },
     ],
+    formats:["image/avif", "image/webp"],
   },
 
 };

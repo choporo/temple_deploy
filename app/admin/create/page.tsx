@@ -16,7 +16,12 @@ function CreateProperty() {
           <div className="grid md:grid-cols-2 gap-8 mb-4">
             <FormInput name="name" type="text" label="사찰이름" />
             <FormInput name="title" type="text" label="사찰 부제" />
-            <FormInput name="parking" type="text" label="주차비" />
+            <FormInput
+              name="parking"
+              type="text"
+              label="주차비"
+              defaultValue="주차:"
+            />
             <FormInput name="entranceFee" type="text" label="입장료" />
             <FormInput name="publicBus" type="text" label="대중교통" />
             <FormInput name="rating" type="text" label="구글 별점" />

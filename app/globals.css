@@ -37,12 +37,6 @@
     --radius: 0.5rem;
   }
 }
-@font-face {
-  font-family: laundry;
-  src: url("../public/fonts/laundry.woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: jalnan;

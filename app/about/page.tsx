@@ -31,9 +31,6 @@ function AboutPage() {
           </h1>
           <AboutTemple />
           <AboutBuddha />
-          {/* <div id="Adscode" className="w-full">
-            <FooterAds />
-          </div> */}
           <AboutFourProducts />
           <AboutPortal />
         </div>
