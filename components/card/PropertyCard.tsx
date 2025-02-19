@@ -67,8 +67,8 @@ function PropertyCard({
 
             {parking.split(":")[1] === "무료" ? null : (
               <p>
-                {"("}주차:
-                {parking.split(":")[1]}
+                {"("}
+                {parking}
                 {")"}
               </p>
             )}

@@ -37,8 +37,7 @@ function PropertiesList({
         )}
         <div className="sm:flex hidden">
           {currentItems.length < 6 && currentItems.length !== 3 ? (
-            // <InFeedAds />
-            <p>1</p>
+            <InFeedAds />
           ) : null}
         </div>
       </section>
