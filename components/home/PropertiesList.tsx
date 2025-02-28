@@ -26,14 +26,12 @@ function PropertiesList({
       </p>
 
       <section className="mt-4 gap-8 grid sm:grid-cols-2  lg:grid-cols-3  ">
-        {currentItems.map(
-          (property, index) => (
-            // properties.length > 50 && index === 4 ? (
-            //   <InFeedAds key={index} />
-            // ) : (
+        {currentItems.map((property, index) =>
+          properties.length > 50 && index === 4 ? (
+            <InFeedAds key={index} />
+          ) : (
             <PropertyCard key={property.id} property={property} index={index} />
           )
-          // )
         )}
         <div className="sm:flex hidden">
           {currentItems.length < 6 && currentItems.length !== 3 ? (

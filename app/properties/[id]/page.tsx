@@ -5,12 +5,9 @@ import { redirect } from "next/navigation";
 import Description from "@/components/properties/Description";
 import Amenities from "@/components/properties/Amenities";
 import { FaStar } from "react-icons/fa6";
-import TempleMap from "@/components/properties/TempleMap";
-import FooterAds from "@/components/ads/FooterAds";
 import { Metadata } from "next";
-import ImageContainer from "@/components/properties/ImageContainer";
 import HistoryDescription from "@/components/properties/HistoryDescription";
-import NaverMap from "@/components/map/NaverMap";
+import dynamic from "next/dynamic";
 
 export async function generateMetadata({
   params,
@@ -57,6 +54,14 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     entranceFee,
     parking,
   } = property;
+
+  const ImageContainer = dynamic(
+    () => import("@/components/properties/ImageContainer"),
+    { ssr: false }
+  );
+  const NaverMap = dynamic(() => import("@/components/map/NaverMap"), {
+    ssr: false,
+  });
 
   return (
     <section className="overflow-y-scroll">

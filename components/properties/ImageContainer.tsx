@@ -7,6 +7,10 @@ function ImageContainer({
   mainImage: string;
   name: string;
 }) {
+  const base64 = "data:image/jpeg;base64,";
+  const blurImg =
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII=";
+
   return (
     <section className="h-[300px] md:h-[550px] relative mt-2">
       <Image
@@ -16,7 +20,7 @@ function ImageContainer({
         alt={name}
         className="object-cover rounded-md"
         priority
-        blurDataURL={mainImage}
+        blurDataURL={base64 + blurImg}
         placeholder="blur"
       />
     </section>

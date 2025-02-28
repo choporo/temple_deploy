@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PropertyCardProps } from "@/utils/types";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa6";
+import dynamic from "next/dynamic";
 
 function PropertyCard({
   property,
@@ -22,6 +23,10 @@ function PropertyCard({
     rating,
     parking,
   } = property;
+
+  const base64 = "data:image/jpeg;base64,";
+  const blurImg =
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII=";
 
   return (
     <motion.article
@@ -43,7 +48,7 @@ function PropertyCard({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
             priority
-            blurDataURL={mainImage}
+            blurDataURL={base64 + blurImg}
             placeholder="blur"
             alt={name}
             className="p-1 rounded-md object-cover transform group-hover:scale-110 transition-transform duration-500 "
