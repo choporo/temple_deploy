@@ -33,11 +33,11 @@ function PropertiesList({
             <PropertyCard key={property.id} property={property} index={index} />
           )
         )}
-        <div className="sm:flex hidden">
+        {/* <div className="xl:flex hidden">
           {currentItems.length < 6 && currentItems.length !== 3 ? (
             <InFeedAds />
           ) : null}
-        </div>
+        </div> */}
       </section>
       <div className="my-5">
         <PaginationSection
