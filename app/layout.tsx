@@ -115,8 +115,8 @@ export default function RootLayout({
             <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}
           <Providers>
-            <Navbar />
             <Container>
+              <Navbar />
               <PageTransition>
                 <main className="container py-5">{children}</main>
               </PageTransition>
