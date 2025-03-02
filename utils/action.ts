@@ -66,21 +66,22 @@ export const fetchAllProperties = async () => {
       category: "desc",
     },
     select: {
-      // mainImage: true,
-      // image1: true,
       id: true,
-      // name: true,
-      // title: true,
-      // address: true,
-      // parking: true,
-      // entranceFee: true,
-      // publicBus: true,
-      // tale: true,
-      // nameHistory: true,
-      // rating: true,
-      // templeHistory: true,
-      // templeStay: true,
-      // hotPlace: true,
+      updatedAt: true
+    },
+  });
+
+  return properties;
+};
+
+export const fetchPropertiesRss = async () => {
+  const properties = await db.property.findMany({
+  
+    select: {
+      id: true,
+      name: true,
+      title: true,
+      templeStay: true,
       updatedAt: true
     },
   });

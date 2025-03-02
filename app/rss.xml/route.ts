@@ -1,26 +1,27 @@
-import { templePosts } from "@/utils/posts";
+import { fetchPropertiesRss } from "@/utils/action";
 import RSS from "rss";
 
 export async function GET() {
-  const posts = templePosts;
+  const posts = await fetchPropertiesRss()
 
   const feed = new RSS({
-    title: "국내 사찰 여행 | 절로 가",
-    description: "가볼 만한 국내 전통사찰 여행정보",
+    title: "국내 전통사찰 여행 | 절로 가",
+    description: "사찰 이름의 유래부터 내려오는 전설까지... 알기 쉽게 풀어 쓴 사찰 관련 여행정보 안내",
+    generator: 'RSS for Node and Next.js',
     site_url: "http://templeroad.kr",
     feed_url: `http://templeroad.kr/feed.xml`,
     copyright: `${new Date().getFullYear()} http://templeroad.kr`,
-    language: "ko",
+    language: "ko-Kr",
     pubDate: new Date(),
+    ttl:60
   });
 
   posts.forEach((post) => {
     feed.item({
-      title: post.title,
-      description: post.description,
-      url: post.link,
-      date: post.pubDate,
-      guid: post.link,
+      title: post.name,
+      description: post.title,
+      url: `https://templeroad.kr/properties/${post.id}`,
+      date: post.updatedAt,
     });
   });
 
