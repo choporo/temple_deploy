@@ -4,7 +4,6 @@ import Link from "next/link";
 import { PropertyCardProps } from "@/utils/types";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa6";
-import dynamic from "next/dynamic";
 
 function PropertyCard({
   property,
@@ -41,7 +40,11 @@ function PropertyCard({
       }}
       whileTap={{ scale: 0.9 }}
     >
-      <Link href={`/properties/${propertyId}`} passHref>
+      <Link
+        href={`/properties/${propertyId}`}
+        passHref
+        aria-label="temple image"
+      >
         <div className="relative h-[220px] xl:h-[250px] mb-2 overflow-hidden rounded-md">
           <Image
             src={mainImage}
