@@ -11,6 +11,7 @@ import { GoogleAdSense } from "@/components/home/GoogleAdSence";
 import GoogleAnalytics from "@/lib/GoogleAnaytics";
 import { Inter } from "next/font/google";
 import PageTransition from "@/components/animation/PageTransition";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -113,6 +114,9 @@ export default function RootLayout({
         <body className={pretendard.className}>
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
+          {process.env.NEXT_PUBLIC_GOOGLE_TAG ? (
+            <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG} />
           ) : null}
           <Providers>
             <Container>

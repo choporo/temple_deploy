@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PropertyCardProps } from "@/utils/types";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa6";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 function PropertyCard({
   property,
@@ -45,7 +46,12 @@ function PropertyCard({
         passHref
         aria-label="temple image"
       >
-        <div className="relative h-[220px] xl:h-[250px] mb-2 overflow-hidden rounded-md">
+        <div
+          className="relative h-[220px] xl:h-[250px] mb-2 overflow-hidden rounded-md"
+          onClick={() =>
+            sendGTMEvent({ event: "pageClicked", value: `${name}` })
+          }
+        >
           <Image
             src={mainImage}
             fill

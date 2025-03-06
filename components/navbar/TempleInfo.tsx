@@ -12,6 +12,7 @@ import {
 import { LuAlignLeft } from "react-icons/lu";
 import Link from "next/link";
 import lotus from "@/public/image/lotus.jpg";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function ModeToggle() {
   return (
@@ -23,7 +24,12 @@ export default function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem className="flex gap-x-2">
+        <DropdownMenuItem
+          className="flex gap-x-2"
+          onClick={() =>
+            sendGTMEvent({ event: "aboutClicked", value: "about" })
+          }
+        >
           <Image src={lotus} alt="연꽃" className="w-6 h-6 sm:w-8 sm:h-8" />
           <Link href={"/about"} className="text-xs sm:text-sm" passHref>
             불교 용어 해설
