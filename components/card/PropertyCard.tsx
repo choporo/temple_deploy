@@ -80,7 +80,8 @@ function PropertyCard({
               {address.split(" ")[0]} {address.split(" ")[1]}
             </p>
 
-            {parking.split(":")[1] === "무료" ? null : (
+            {parking.split(":")[1] === "무료" ||
+            parking.split(":")[1] === "불가" ? null : (
               <p>
                 {"("}
                 {parking}
