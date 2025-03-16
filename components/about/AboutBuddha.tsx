@@ -23,6 +23,7 @@ function AboutBuddha() {
             }}
             sizes="100vw"
             className="w-full rounded object-cover"
+            unoptimized
           />
           <p className="text-center tracking-widest text-sm">
             {"<"}수덕사 - 대웅전{">"}
@@ -59,6 +60,7 @@ function AboutBuddha() {
           }}
           sizes="100vw"
           className="w-full rounded object-cover"
+          unoptimized
         />
         <p className="text-center tracking-widest text-sm">
           {"<"}수덕사 - 대웅전{">"}

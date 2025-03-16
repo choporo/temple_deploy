@@ -7,8 +7,8 @@ function MobileVertionBuddhaSecond() {
     <article className="text-justify">
       <div className="tracking-wide text-justify ">
         {sanctum.map((item, index) => (
-          <p className="mb-2 text-sm/loose" key={index}>
-            {index > 7 ? item.label : null}
+          <p className="text-sm/loose" key={index}>
+            {index > 6 ? item.label : null}
           </p>
         ))}
       </div>
@@ -22,6 +22,7 @@ function MobileVertionBuddhaSecond() {
           }}
           sizes="100vw"
           className="w-full rounded object-cover"
+          unoptimized
         />
         <p className="text-center tracking-widest text-xs">
           {"<"}수덕사 - 대웅전{">"}

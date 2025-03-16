@@ -22,6 +22,7 @@ function ImageContainer({
         priority
         blurDataURL={base64 + blurImg}
         placeholder="blur"
+        unoptimized
       />
     </section>
   );
