@@ -16,7 +16,7 @@ const nextConfig = {
         hostname: "pbshgdpsuzsoyipensta.supabase.co",
       },
     ],
-    formats:["image/avif", "image/webp"],
+    formats:["image/avif"],
     unoptimized: true
   },
 

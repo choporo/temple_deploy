@@ -29,6 +29,9 @@ export function CarouselCard({
     Autoplay({ delay: 4000, stopOnInteraction: true })
   );
   const images = [image1, image2];
+  const base64 = "data:image/jpeg;base64,";
+  const blurImg =
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM8UQ8AAhUBSQV8WJQAAAAASUVORK5CYII=";
 
   return (
     <Carousel
@@ -53,8 +56,9 @@ export function CarouselCard({
                     }}
                     sizes="100vw"
                     className="rounded-md"
-                    // placeholder="blur"
-                    // blurDataURL={image}
+                    unoptimized
+                    placeholder="blur"
+                    blurDataURL={base64 + blurImg}
                   />
                 </CardContent>
               </Card>

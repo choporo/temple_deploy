@@ -28,7 +28,12 @@ export default function ModeToggle() {
             sendGTMEvent({ event: "aboutClicked", value: "about" })
           }
         >
-          <Image src={lotus} alt="연꽃" className="w-6 h-6 sm:w-8 sm:h-8" />
+          <Image
+            src={lotus}
+            alt="연꽃"
+            className="w-6 h-6 sm:w-8 sm:h-8"
+            unoptimized
+          />
           <Link href={"/about"} className="text-xs sm:text-sm" passHref>
             불교 용어 해설
           </Link>

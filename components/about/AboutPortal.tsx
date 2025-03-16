@@ -20,6 +20,7 @@ function AboutPortal() {
             }}
             sizes="100vw"
             className="w-full md:h-72 h-32 rounded object-cover"
+            unoptimized
           />
           <p className="text-center tracking-widest text-sm ">
             {"<"}건봉사 - 불이문{">"}
@@ -46,6 +47,7 @@ function AboutPortal() {
           }}
           sizes="100vw"
           className="w-full h-40 rounded object-cover"
+          unoptimized
         />
         <p className="text-center tracking-widest text-xs">
           {"<"}건봉사 - 불이문{">"}

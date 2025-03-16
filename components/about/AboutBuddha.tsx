@@ -30,7 +30,10 @@ function AboutBuddha() {
         </div>
         <div className="xl:col-span-7 tracking-wider text-justify ">
           {sanctum.map((item, index) => (
-            <p className="mb-1 tracking-wider text-justify text-xs/loose sm:text-base/loose">
+            <p
+              className="mb-1 tracking-wider text-justify text-xs/loose sm:text-base/loose"
+              key={index}
+            >
               {index < 6 ? item.label : null}
             </p>
           ))}
@@ -38,7 +41,10 @@ function AboutBuddha() {
       </div>
       <div>
         {sanctum.map((item, index) => (
-          <p className="mb-1 tracking-wider text-justify text-xs/loose sm:text-base/loose">
+          <p
+            className="mb-1 tracking-wider text-justify text-xs/loose sm:text-base/loose"
+            key={index}
+          >
             {index > 6 ? item.label : null}{" "}
           </p>
         ))}

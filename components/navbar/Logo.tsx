@@ -18,6 +18,7 @@ function Logo() {
           src={moktak}
           alt="목탁"
           className="hidden sm:flex w-10 h-10 mt-0.5"
+          unoptimized
         />
       </Link>
     </div>

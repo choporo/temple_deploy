@@ -10,7 +10,10 @@ function AboutTemple() {
       <div className="mx-1 grid gap-y-3 xl:grid-cols-12 gap-x-5">
         <div className="xl:col-span-7">
           {temple.map((item, index) => (
-            <p className="xl:text-base/loose text-sm/loose tracking-wider ">
+            <p
+              className="xl:text-base/loose text-sm/loose tracking-wider "
+              key={index}
+            >
               {index < 8 ? item.label : null}
             </p>
           ))}
@@ -25,6 +28,7 @@ function AboutTemple() {
             }}
             sizes="100vw"
             className="w-full rounded object-cover"
+            unoptimized
           />
           <p className="text-center tracking-widest text-sm">
             {"<"}용화사 - 약사여래, 관음보살, 문수보살, 보현보살{">"}

@@ -60,6 +60,7 @@ function PropertyCard({
             blurDataURL={base64 + blurImg}
             placeholder="blur"
             alt={name}
+            unoptimized
             className="p-1 rounded-md object-cover transform group-hover:scale-110 transition-transform duration-500 "
           />
         </div>
