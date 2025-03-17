@@ -5,6 +5,7 @@ import AboutBuddha from "@/components/about/AboutBuddha";
 import AboutFourProducts from "@/components/about/AboutFourProducts";
 import AboutPortal from "@/components/about/AboutPortal";
 import MobileVersion from "@/components/about/MobileVersion";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "알기 쉬운 불교 관련 용어",
@@ -23,7 +24,12 @@ function AboutPage() {
   return (
     <article>
       <div className="items-center">
-        <div className="hidden sm:grid">
+        <div
+          className="hidden sm:grid"
+          onClick={() =>
+            sendGTMEvent({ event: "aboutClicked", value: "about" })
+          }
+        >
           <h1 className="text-2xl font-pretendard_bold text-green-700 tracking-wider text-center my-4">
             불교 용어
             <span className="text-gray-800 text-base"> & </span>
