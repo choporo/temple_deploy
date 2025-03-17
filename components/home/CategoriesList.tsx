@@ -2,7 +2,6 @@ import React from "react";
 import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { categories } from "@/utils/categories";
 import Link from "next/link";
-import { sendGTMEvent } from "@next/third-parties/google";
 
 function CategoriesList({
   category,
@@ -18,12 +17,7 @@ function CategoriesList({
   return (
     <section>
       <ScrollArea className="sm:py-2">
-        <div
-          className="whitespace-nowrap overflow-x-auto flex gap-x-4"
-          onClick={() =>
-            sendGTMEvent({ event: "categoryClicked", value: `${categories}` })
-          }
-        >
+        <div className="whitespace-nowrap overflow-x-auto flex gap-x-4">
           {categories.map((item) => {
             const isActive = item.label === category;
             // const iconColor = isActive ? activeColor : inactiveColor;
