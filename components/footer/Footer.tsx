@@ -15,9 +15,12 @@ function Footer() {
         ) : null}
       </header>
       <footer>
-        {/* <FooterAds /> */}
+        <div className="hidden xl:flex">
+          <FooterAds />
+        </div>
+
         <div
-          className="w-full h-16"
+          className="w-full h-16 xl:hidden"
           onClick={() =>
             sendGTMEvent({ event: "googlePlayClicked", value: `GooglePlay` })
           }
