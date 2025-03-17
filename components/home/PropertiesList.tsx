@@ -25,7 +25,7 @@ function PropertiesList({
         <span className="text-yellow-500 text-sm">★</span> 출처 : Google
       </p>
 
-      <section className="mt-4 gap-8 grid sm:grid-cols-2  lg:grid-cols-3  ">
+      <section className="mt-4 gap-8 grid sm:grid-cols-2 lg:grid-cols-3  ">
         {currentItems.map((property, index) =>
           properties.length > 50 && index === 4 ? (
             <InFeedAds key={index} />

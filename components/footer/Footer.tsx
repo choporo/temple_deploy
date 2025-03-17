@@ -1,13 +1,19 @@
+"use client";
 import Image from "next/image";
 import FooterAds from "../ads/FooterAds";
 import Container from "../global/Container";
 import play from "@/public/image/play.png";
 import Link from "next/link";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { GoogleTagManager, sendGTMEvent } from "@next/third-parties/google";
 
 function Footer() {
   return (
     <Container>
+      <header>
+        {process.env.NEXT_PUBLIC_GOOGLE_TAG ? (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG} />
+        ) : null}
+      </header>
       <footer>
         {/* <FooterAds /> */}
         <div
