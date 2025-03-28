@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { LuAlignLeft } from "react-icons/lu";
 import Link from "next/link";
-import lotus from "@/public/image/lotus.jpg";
+import lotus from "@/public/image/lotus.png";
 import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function ModeToggle() {

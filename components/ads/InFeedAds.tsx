@@ -13,7 +13,7 @@ const InFeedAds = () => {
   }, []);
 
   return (
-    <div className="googleAd-container w-full h-48">
+    <div className="googleAd-container w-full h-[250px] sm:h-[300px]">
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}

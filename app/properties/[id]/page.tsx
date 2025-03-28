@@ -8,6 +8,8 @@ import { FaStar } from "react-icons/fa6";
 import { Metadata } from "next";
 import HistoryDescription from "@/components/properties/HistoryDescription";
 import dynamic from "next/dynamic";
+import InFeedAds from "@/components/ads/InFeedAds";
+import FooterAds from "@/components/ads/FooterAds";
 
 export async function generateMetadata({
   params,
@@ -97,10 +99,10 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           />
           <Separator className="mt-4 mb-6" />
           <HistoryDescription title="사찰 연혁" description={templeHistory} />
+          <FooterAds />
           <div className="my-5">
             <Description title="관련 설화" description={tale} />
           </div>
-          {/* <TempleMap lat={latitude} lon={longitude} name={name} /> */}
         </div>
         <div>
           <NaverMap loc={[Number(longitude), Number(latitude)]} />
