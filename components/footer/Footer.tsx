@@ -13,7 +13,7 @@ function Footer() {
       }
     >
       <Link
-        href="https://play.google.com/store/apps/details?id=com.choporo.hotspring"
+        href="https://play.google.com/store/apps/details?id=com.choporo.temple"
         passHref
         aria-label="google_play"
       >
