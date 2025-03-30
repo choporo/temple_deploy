@@ -124,8 +124,8 @@ export default function RootLayout({
               <PageTransition>
                 <main className="container py-5">{children}</main>
               </PageTransition>
+              <Footer />
             </Container>
-            {/* <Footer /> */}
           </Providers>
         </body>
       </html>
