@@ -99,7 +99,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
           />
           <Separator className="mt-4 mb-6" />
           <HistoryDescription title="사찰 연혁" description={templeHistory} />
-          <FooterAds />
+          {/* <FooterAds /> */}
           <div className="my-5">
             <Description title="관련 설화" description={tale} />
           </div>
