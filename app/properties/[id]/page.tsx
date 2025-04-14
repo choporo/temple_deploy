@@ -8,8 +8,6 @@ import { FaStar } from "react-icons/fa6";
 import { Metadata } from "next";
 import HistoryDescription from "@/components/properties/HistoryDescription";
 import dynamic from "next/dynamic";
-import InFeedAds from "@/components/ads/InFeedAds";
-import FooterAds from "@/components/ads/FooterAds";
 
 export async function generateMetadata({
   params,
