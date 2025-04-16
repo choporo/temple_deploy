@@ -64,7 +64,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
   });
 
   return (
-    <section className="overflow-y-scroll">
+    <section>
       <BreadCrumbs category={category} name={name} />
       <ImageContainer mainImage={image1} name={name} />
       <section className="mt-4">
